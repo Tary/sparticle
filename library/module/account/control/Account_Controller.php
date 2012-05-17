@@ -154,7 +154,7 @@ class LAIKA_Account_Controller extends LAIKA_Abstract_Page_Controller {
         $subject = 'Registration confirmation';
         $query   = array('token'=>LAIKA_Account::get('token'));
         
-        $link = self::link_to('Confirm your account', '/account/confirm', array('title'=>'click to confirm'), $query);
+        $link = self::link_to('Confirm your account', '/account/confirm', array('title'=>'click to confirm','style'=>'color:#3399cc;'), $query);
         $template = LAIKA_Mail::load_template(dirname(dirname(__FILE__)).'/view/Registration_Confirmation.php',array('link'=>$link));
         
         LAIKA_Mail::sendmail($user,$subject,$template,array('SENDER'=>$sender,'FORMAT'=>'html'));        
@@ -169,16 +169,18 @@ class LAIKA_Account_Controller extends LAIKA_Abstract_Page_Controller {
     public function resend_confirmation(){
         
         $token = md5(rand(1,99999999).SESSION_TOKEN);        
-        $user = LAIKA_User::find('email',$_POST['email']);
+        //$user = LAIKA_User::find('email',$_POST['email']);
+        $user  = LAIKA_User::find('username',$_POST['user']);
+        $email = $user->email();
         $id = $user->id();
         if(isset($id)):
             $account = $user->account();
-            $account->token($token);        
+            $account->dset('token',$token);        
             self::send_confirmation($user);
-            $message = "Please check your email for a comfirmation key";
+            $message = "Please check your email at <$email> for a comfirmation key";
             $this->display(array("component"=>"confirm","alert"=>$message,"alert_type"=>"success"));
         else:
-            $message = "The email you entered does not match any emails in our records.";
+            $message = "The username you entered does not match our records.";
             $this->display(array("component"=>"confirm","alert"=>$message,"alert_type"=>"warning","status"=>false));
         endif;
     }     

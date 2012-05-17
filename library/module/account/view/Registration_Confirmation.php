@@ -33,11 +33,11 @@ $content = <<<EMAIL
     	   <p style="color:#555555;font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;line-height:1.5;margin-left:30px;margin-right:30px;margin-bottom:30px;">
                 <span>To confirm your account please click on the link below:</span>
                 <br/>
-                <span style="color:#3399cc">$link</span>
+                $link
            </p>
     	   
             <p style="background-color:#dddddd;font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;font-size:small;color:#666666;padding:15px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;border-top-color:#bbbbbb; border-width:1px; border-top-style:solid;text-align:center;margin:0;">
-                To request a new token click <a href="$url" style="color:#3399cc">here</a>.
+                To request a new token click <a href="$url/account/confirm" style="color:#3399cc">here</a>.
             </p>	   
 	   </td>
 	</tr>

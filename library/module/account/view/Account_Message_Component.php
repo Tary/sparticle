@@ -1,6 +1,9 @@
-<div id=container>
+<div id=container class=confirm>
+    <h1>Registration</h1>
+    <br />
     <p>
-    Thank you for registering. An email has been sent to the address that you registered with.<br />
-    Please Confirm your registration by clicking on the confirmation link included in the email.
+    <b>Thank you for registering. An email has been sent to the address that you registered with.</b>
+    <br />
+    <b>Please Confirm your registration by clicking on the confirmation link included in the email.</b>
     </p>
 </div>

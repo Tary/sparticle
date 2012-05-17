@@ -9,5 +9,6 @@ tmp/uploads/*
 *.svn/*
 *.sql
 !schema.sql
+!.gitignore
 .DS_Store*
 *.DS_Store

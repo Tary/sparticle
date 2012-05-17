@@ -212,8 +212,7 @@ class LAIKA_Account_Controller extends LAIKA_Abstract_Page_Controller {
                 $this->display(array("component"=>"confirm","alert"=>$message,"alert_type"=>"warning","status"=>false));
             endif;
         else:
-            $message = "The confirmation key did not match our records";
-            $this->display(array("component"=>"confirm","alert"=>$message,"alert_type"=>"warning","status"=>false));
+            $this->display(array("component"=>"confirm"));
         endif;
     }
 }

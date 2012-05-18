@@ -1,57 +1,105 @@
+LAIKA FRAMEWORK
+===============
+
 Requirements:
 -------------
-###[PHP 5.3+](http://php.net/)
-###[Apache](http://apache.org/)
-###[MySQL](http://www.mysql.com/)
+
+####[ PHP 5.3+ ]( http://php.net/       )
+####[ Apache   ]( http://apache.org/    )
+####[ MySQL    ]( http://www.mysql.com/ )
+
 
 
 System Configuration:
 ---------------------
 
-###Apache:
+#### Apache:
 In order for URLs to be rewritten properly, `mod_rewrite` and htaccess needs to be enabled.   
-For compression of web pages, `mod_deflate` or `mod_gzip` needds to be enabled. 
+For compression of web pages, `mod_deflate` or `mod_gzip` needs to be enabled. 
 
 
-###PHP:
+#### PHP:
 Short open tags must be enabled in the *php.ini* file:  
 `short_open_tags=On`
 
 
-###Optional:
+#### Optional:
 Configure the `upload_max_filesize`, `post_max_size`, `max_execution_time` in the *php.ini* file.  
 For the progress bar to work properly the [uploadprogress extension](http://pecl.php.net/package/uploadprogress) for PHP needs to be installed.
 
 
-###Permissions:
+#### Permissions:
 All directories found within the *tmp* directory must have their permissions set properly for logs and cache files to be written properly. On a unix like system, the *user* or *group* should be set to *www* with a chmod of 755 or 775 respectively. The *error.log* file also needs to have write permissions for user *www*.
+
 
 
 Application Configuration:
 --------------------------
 
-All application level configurations are made by editing the ***user.conf.php*** file found in the config directory.
+All application level configurations are made by editing the ***user.conf.php*** file found in the config directory.  
+On production servers the development flag needs to be turned off:  
+    
+    define( 'DEVELOPMENT_ENVIRONMENT', false );
+    
+
+If the database settings need to be customized, edit the following lines:
+
+    define( 'DB_TYPE', 'mysql'      );
+    define( 'DB_NAME', 'laika_db'   );
+    define( 'DB_PASS', 'laika'      );
+    define( 'DB_USER', 'laika_user' );
+    define( 'DB_HOST', 'localhost'  );
+    define( 'DB_PORT',  3306        );
+    define( 'USE_PDO',  true        ); // set to false to specify specific wrapper class
 
 
 
 Laika Script:
 -------------
 
-### Usage: 
-> **php laika -model NAME FIELD:TYPE:SIZE**
+#### Configuration:
+Set the first line to point to location of *PHP* executable binary.  
 
-> **php laika -controller NAME**
+    #!/usr/bin/php  
 
-> **php laika -view NAME**
+Set the *$mysql* variable to the *MySQL* default path for your system.
+   
+    $mysql = "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/";
 
 
-### Examples:
-> laika -model comment user:int:16 comment:text
+#### Usage:
+You can generate the basic scaffoling for the MVC pattern and database tables by running the laika cli script.  
+For generating the MVC components the commands are as follows:  
 
-> laika -controller comment
+> php laika -model *NAME FIELD:TYPE:SIZE*  
 
-> laika -view comment
+> php laika -controller *NAME*  
 
-> laika -schema
+> php laika -view *NAME*  
 
-> laika -dump
+The NAME of should be the non-plural name of the MVC component to be generated.  
+The Model requires some extra parameters to be passed. These include the name of the database column and its datatype.  
+The size of the data is optional. If not specified, it will be set to the MySQL default.
+
+#### Examples:
+Switch the working directory into the *scripts* directory.  
+Precede the command with a `./` or `php` to ensure the system looks for the script in the current working directory.   
+
+> $ cd scripts
+
+> $ php laika -model comment user:int:16 comment:text
+
+> $ php laika -controller comment
+
+> $ php laika -view comment
+
+
+#### SQL Dumps:
+Additionally, the script can generate sql dumps by passing in the following flags.  
+The `dump` flag will generate a full backup of the database.  
+The `schema` flag will generate a schema sql dump.  
+Use the `schema` flag to make database initialization and migration files.
+
+> $ ./laika -schema
+
+> $ ./laika -dump

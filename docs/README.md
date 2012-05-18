@@ -3,6 +3,7 @@ LAIKA FRAMEWORK
 
 Requirements:
 -------------
+#### The Usual Suspects ####
 
 ####[ PHP 5.3+ ]( http://php.net/       )
 ####[ Apache   ]( http://apache.org/    )
@@ -62,9 +63,9 @@ Set the first line to point to location of *PHP* executable binary.
 
     #!/usr/bin/php  
 
-Set the *$mysql* variable to the *MySQL* default path for your system.
+Set the *MYSQL_PATH* constant to the *MySQL* default path for your system.
    
-    $mysql = "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/";
+    define( MYSQL_PATH, "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/");
 
 
 #### Usage:

@@ -6,7 +6,8 @@
 include('../config/system.conf.php');
 include('../config/user.conf.php');
 $args  = $_SERVER["argv"];
-$mysql = "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/";
+
+define( MYSQL_PATH, "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/");
 
 
 switch($args[1]){
@@ -115,16 +116,16 @@ function create($table,$params){
     
     //$statement = "CREATE TABLE IF NOT EXISTS $table (id int(16) NOT NULL AUTO_INCREMENT$fields, created date NOT NULL, updated timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, PRIMARY KEY (id) ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
         
-    $mysql = new mysqli($host=DB_HOST, $user=DB_USER, $pass=DB_PASS, $db=DB_NAME, $port=DB_PORT);
+    $connection = new mysqli($host=DB_HOST, $user=DB_USER, $pass=DB_PASS, $db=DB_NAME, $port=DB_PORT);
 
-    if ($mysql->connect_error)
-        die('Connect Error('.$mysql->connect_errno.') '.$mysql->connect_error);
+    if ($connection->connect_error)
+        die('Connect Error('.$connection->connect_errno.') '.$connection->connect_error);
         
-    $result = $mysql->query($statement);
+    $result = $connection->query($statement);
     if(!$result)
-        echo 'database error'.PHP_EOL.$mysql->error.PHP_EOL;       
+        echo 'database error'.PHP_EOL.$connection->error.PHP_EOL;       
     
-    $mysql->close();
+    $connection->close();
 }
 
 
@@ -202,13 +203,11 @@ function schema(){
     if(file_exists($file) && !copy($file, $newfile))
         die("Failed to copy $file...\n");
     else
-        system($mysql.'mysqldump -u '.DB_USER.' -h '.DB_HOST.' --no-data -p'.DB_PASS.' '.DB_NAME.' > ../db/schema.sql');    
-    
-
+        system(MYSQL_PATH.'mysqldump -u '.DB_USER.' -h '.DB_HOST.' --no-data -p'.DB_PASS.' '.DB_NAME.' > ../db/schema.sql');    
 }
 
 function dump(){
-    system($mysql.'mysqldump -u '.DB_USER.' -h '.DB_HOST.' -p'.DB_PASS.' '.DB_NAME.' > ../db/dump.sql');
+    system(MYSQL_PATH.'mysqldump -u '.DB_USER.' -h '.DB_HOST.' -p'.DB_PASS.' '.DB_NAME.' > ../db/dump.sql');
 }
 
 

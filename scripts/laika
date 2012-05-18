@@ -6,7 +6,7 @@
 include('../config/system.conf.php');
 include('../config/user.conf.php');
 $args  = $_SERVER["argv"];
-$mysql_path = "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/";
+$mysql = "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/";
 
 
 switch($args[1]){
@@ -202,13 +202,13 @@ function schema(){
     if(file_exists($file) && !copy($file, $newfile))
         die("Failed to copy $file...\n");
     else
-        system('/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/mysqldump -u '.DB_USER.' -h '.DB_HOST.' --no-data -p'.DB_PASS.' '.DB_NAME.' > ../db/schema.sql');    
+        system($mysql.'mysqldump -u '.DB_USER.' -h '.DB_HOST.' --no-data -p'.DB_PASS.' '.DB_NAME.' > ../db/schema.sql');    
     
 
 }
 
 function dump(){
-    system('/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/mysqldump -u '.DB_USER.' -h '.DB_HOST.' -p'.DB_PASS.' '.DB_NAME.' > ../db/dump.sql');
+    system($mysql.'mysqldump -u '.DB_USER.' -h '.DB_HOST.' -p'.DB_PASS.' '.DB_NAME.' > ../db/dump.sql');
 }
 
 

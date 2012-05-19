@@ -1,14 +1,14 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Singleton.php
+ *  @filesource     Singleton.php
  *
- *	@version        0.1.0b
- *	@date           2011-05-21 18:28:12 -0400 (Sat, 21 May 2011)
+ *  @version        0.1.0b
+ *  @date           2011-05-21 18:28:12 -0400 (Sat, 21 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
@@ -16,9 +16,9 @@
  * 
  *  Base class for all objects employing the Singleton pattern.
  *
- *	@package        Laika
- *	@subpackage     core
- *	@category       abstract
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       abstract
  *
  *  @abstract
  *  @extends        Laika
@@ -26,7 +26,7 @@
 abstract class Laika_Singleton extends Laika{
 
 //-------------------------------------------------------------------
-//	PROPERTIES
+//  PROPERTIES
 //-------------------------------------------------------------------    
     /**
      * instance
@@ -38,7 +38,7 @@ abstract class Laika_Singleton extends Laika{
     private static $instance;
     
 //-------------------------------------------------------------------
-//	CONSTRUCTOR
+//  CONSTRUCTOR
 //------------------------------------------------------------------- 
     /**
      * __construct function.
@@ -74,7 +74,7 @@ abstract class Laika_Singleton extends Laika{
 
 
 //-------------------------------------------------------------------
-//	SETTER & GETTER METHODS
+//  SETTER & GETTER METHODS
 //-------------------------------------------------------------------
 
     /**
@@ -121,7 +121,7 @@ abstract class Laika_Singleton extends Laika{
     }
       
 //-------------------------------------------------------------------
-//	ARRAY CONVERSION
+//  ARRAY CONVERSION
 //-------------------------------------------------------------------
 
     /**
@@ -166,7 +166,7 @@ abstract class Laika_Singleton extends Laika{
     
     
 //-------------------------------------------------------------------
-//	SERIALIZE & UNSERIALIZE METHODS
+//  SERIALIZE & UNSERIALIZE METHODS
 //-------------------------------------------------------------------
     /**
      * serialize_me function.
@@ -196,7 +196,7 @@ abstract class Laika_Singleton extends Laika{
 
 
 //-------------------------------------------------------------------
-//	DESTRUCTOR
+//  DESTRUCTOR
 //-------------------------------------------------------------------
     
     /**

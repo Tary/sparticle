@@ -2,13 +2,13 @@
 /**
  *  LAIKA SUPERCLASS
  *
- *	@filesource 	Laika.php
+ *  @filesource     Laika.php
  *
- *	@version    	0.1.0b
- *	@date       	2010-01-18 02:29:45 -0500 (Mon, 18 Jan 2010)
+ *  @version        0.1.0b
+ *  @date           2010-01-18 02:29:45 -0500 (Mon, 18 Jan 2010)
  * 
- *	@author 	    Leonard M. Witzel <leonard_witzel@harvard.edu> 
- *	@copyright  	Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
+ *  @author         Leonard M. Witzel <leonard_witzel@harvard.edu> 
+ *  @copyright      Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
  */
 /**
@@ -16,23 +16,23 @@
  *
  *  Framework Superclass 
  *
- *	@package    	Laika
- *	@subpackage 	core
- *	@category   	superclass
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       superclass
  * 
  *  @abstract  
  */
 abstract class Laika{
 
 //-------------------------------------------------------------------
-//	CONSTANTS & VARIABLES
+//  CONSTANTS & VARIABLES
 //-------------------------------------------------------------------
-	
-	const LAIKA_VERSION = 0.20;
-	const LAIKA_RELEASE = 'alpha'; // alpha, beta, rc, production
-	
+    
+    const LAIKA_VERSION = 0.20;
+    const LAIKA_RELEASE = 'alpha'; // alpha, beta, rc, production
+    
 //-------------------------------------------------------------------
-//	CONSTRUCTOR
+//  CONSTRUCTOR
 //-------------------------------------------------------------------
     
     /**
@@ -45,7 +45,7 @@ abstract class Laika{
 
    
 //-------------------------------------------------------------------
-//	SETTER & GETTER METHODS
+//  SETTER & GETTER METHODS
 //-------------------------------------------------------------------
 
     /**
@@ -110,7 +110,7 @@ abstract class Laika{
     }  
 
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //------------------------------------------------------------------- 
     
     /**
@@ -300,7 +300,7 @@ abstract class Laika{
     }
        
 //-------------------------------------------------------------------
-//	DESTRUCTOR
+//  DESTRUCTOR
 //-------------------------------------------------------------------     
     //private function __destruct(){}
     

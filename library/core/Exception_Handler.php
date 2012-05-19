@@ -1,14 +1,14 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Exception_Handler.php
+ *  @filesource     Exception_Handler.php
  *
- *	@version        0.1.0b 
- *	@date           2011-05-22 08:49:46 -0400 (Sun, 22 May 2011)
+ *  @version        0.1.0b 
+ *  @date           2011-05-22 08:49:46 -0400 (Sun, 22 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
@@ -17,9 +17,9 @@
  *  Intercepts uncaught exceptions.
  *  Notifies Observers of intercepted exceptions.
  *
- *	@package        Laika
- *	@subpackage     core
- *	@category      
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category      
  * 
  *  @extends        Laika_Singleton
  *  @implements     SplSubject
@@ -27,7 +27,7 @@
 class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------
     /**
     * instance of Laika_Exception_Handler
@@ -53,7 +53,7 @@ class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
 
 
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------
     /**
     * Attaches an SplObserver object to the handler

@@ -1,22 +1,22 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Home_Controller.php
+ *  @filesource     Home_Controller.php
  *
- *	@version        0.1.0b
- *	@date           2011-05-21 03:37:00 -0400 (Sat, 21 May 2011)
+ *  @version        0.1.0b
+ *  @date           2011-05-21 03:37:00 -0400 (Sat, 21 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /** 
  *  Laika_Error_Controller class.
  * 
- *	@package        Laika
- *	@subpackage     module
- *	@category       control
+ *  @package        Laika
+ *  @subpackage     module
+ *  @category       control
  *
  *  @extends        Laika_Abstract_Page_Controller
  */

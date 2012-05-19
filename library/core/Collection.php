@@ -1,25 +1,25 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Collection.php
+ *  @filesource     Collection.php
  *
- *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       
- *	@date           2012-05-18 21:22:51 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       
+ *  @date           2012-05-18 21:22:51 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Laika_Collection class.
  * 
- *	@package    	Laika
- *	@subpackage 	core
- *	@category   	control
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       control
  * 
  *  @extends        ArrayObject
  */

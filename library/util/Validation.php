@@ -1,22 +1,22 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Validation.php
+ *  @filesource     Validation.php
  *
- *	@version        0.1.0b
- *	@date           2012-05-18 22:11:15 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @date           2012-05-18 22:11:15 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Laika_Validation class.
  * 
- *	@package        Laika
- *	@subpackage     util
- *	@category       data
+ *  @package        Laika
+ *  @subpackage     util
+ *  @category       data
  *
  *  @extends        Laika
  */
@@ -115,19 +115,19 @@ class Laika_Validation extends Laika{
     public static function check_password_strength($password){
 /*
         if( strlen($pwd) < 8 )
-        	$error .= "Password too short! <br />";
+            $error .= "Password too short! <br />";
         if( strlen($pwd) > 20 )
-        	$error .= "Password too long! <br />";
+            $error .= "Password too long! <br />";
         if( strlen($pwd) < 8 )
-        	$error .= "Password too short! <br />";
+            $error .= "Password too short! <br />";
         if( !preg_match("#[0-9]+#", $pwd) )
-        	$error .= "Password must include at least one number! <br />";
+            $error .= "Password must include at least one number! <br />";
         if( !preg_match("#[a-z]+#", $pwd) )
-        	$error .= "Password must include at least one letter! <br />";
+            $error .= "Password must include at least one letter! <br />";
         if( !preg_match("#[A-Z]+#", $pwd) )
-        	$error .= "Password must include at least one CAPS! <br />";
+            $error .= "Password must include at least one CAPS! <br />";
         if( !preg_match("#\W+#", $pwd) )
-        	$error .= "Password must include at least one symbol! <br />";
+            $error .= "Password must include at least one symbol! <br />";
 */
         if(!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password))            
             return '<li>Password is weak.</li>';
@@ -139,18 +139,18 @@ class Laika_Validation extends Laika{
 
 
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Validation.php
+ *  @filesource     Validation.php
  *
- *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     util
- *	@category       data
- *	@date           2012-05-18 22:11:15 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @package        Laika
+ *  @subpackage     util
+ *  @category       data
+ *  @date           2012-05-18 22:11:15 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  *
  * Laika_Validation_Responder class.

@@ -1,22 +1,22 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Image.php
+ *  @filesource     Image.php
  *
- *	@version        0.1.0b
- *	@date           2012-05-18 22:09:20 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @date           2012-05-18 22:09:20 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  * Laika_Image class.
  * 
- *	@package        Laika
- *	@subpackage     util
- *	@category       file
+ *  @package        Laika
+ *  @subpackage     util
+ *  @category       file
  *
  *  @extends        Laika
  */
@@ -366,38 +366,38 @@ class Laika_Image extends Laika{
         return $orientation;        
     }
 
-	/**
-	 * crop function.
-	 * 
-	 * @access private
-	 * @param mixed $width
-	 * @param mixed $height
-	 * @param mixed $new_width
-	 * @param mixed $new_height
-	 * @return void
-	 */
-	private function crop($width, $height){
+    /**
+     * crop function.
+     * 
+     * @access private
+     * @param mixed $width
+     * @param mixed $height
+     * @param mixed $new_width
+     * @param mixed $new_height
+     * @return void
+     */
+    private function crop($width, $height){
 
-		$x = ( $this->width()  / 2 ) - ( $width  / 2 );
-		$y = ( $this->height() / 2 ) - ( $height / 2 );
-		
-		$crop = $this->image;
-		$this->image = imagecreatetruecolor($width, $height);
-		imagecopyresampled($this->image, $crop , 0, 0, $x, $y, $width, $height, $width, $height);
-	}
+        $x = ( $this->width()  / 2 ) - ( $width  / 2 );
+        $y = ( $this->height() / 2 ) - ( $height / 2 );
+        
+        $crop = $this->image;
+        $this->image = imagecreatetruecolor($width, $height);
+        imagecopyresampled($this->image, $crop , 0, 0, $x, $y, $width, $height, $width, $height);
+    }
 
-	
-	/**
-	 * api_path function.
-	 * 
-	 * @access public
-	 * @static
-	 * @param mixed $path
-	 * @param mixed $function
-	 * @param mixed $param
-	 * @return void
-	 */
-	public static function api_path($path,$function,$param,$nocache=false){
+    
+    /**
+     * api_path function.
+     * 
+     * @access public
+     * @static
+     * @param mixed $path
+     * @param mixed $function
+     * @param mixed $param
+     * @return void
+     */
+    public static function api_path($path,$function,$param,$nocache=false){
         switch(strtolower($function)){
             case 'landscape':
                 $f = 'w';
@@ -442,19 +442,19 @@ class Laika_Image extends Laika{
             return IMG_DIRECTORY."/cache/$name";
 */
         return HTTP_ROOT.'/api/image?src='.urlencode($filepath)."&$f=$param";
-	}
-	
-	/**
-	 * reflection function.
-	 * 
-	 * @access public
-	 * @param mixed $path
-	 * @param mixed $param
-	 * @return void
-	 */
-	public function reflection($path,$param){
-	    
-	    $p = self::api_path($path,'auto',$param);
+    }
+    
+    /**
+     * reflection function.
+     * 
+     * @access public
+     * @param mixed $path
+     * @param mixed $param
+     * @return void
+     */
+    public function reflection($path,$param){
+        
+        $p = self::api_path($path,'auto',$param);
                 
         $size       = getimagesize($p);
                 
@@ -490,27 +490,27 @@ class Laika_Image extends Laika{
             $trans+=$in;
         }
         imagecopymerge($this->image, $li, 0, 0, 0, 0, $width, $divider, 100); // Divider  
-	}
-	
-	/**
-	 * reflection_plus function.
-	 * 
-	 * @access public
-	 * @param mixed $path
-	 * @param mixed $param
-	 * @param int $percent (default: 30)
-	 * @param int $transparency (default: 50)
-	 * @return void
-	 */
-	public function reflection_plus($path,$param,$percent=30,$transparency=30){
-	    	    
+    }
+    
+    /**
+     * reflection_plus function.
+     * 
+     * @access public
+     * @param mixed $path
+     * @param mixed $param
+     * @param int $percent (default: 30)
+     * @param int $transparency (default: 50)
+     * @return void
+     */
+    public function reflection_plus($path,$param,$percent=30,$transparency=30){
+                
 /*
-	    $this->reflection($path,$param);
+        $this->reflection($path,$param);
 
-	    $p = self::api_path($path,'auto',$param);
-	    $original = imagecreatefrompng($p);
-	    	    
-	    $size       = getimagesize($this->image);
+        $p = self::api_path($path,'auto',$param);
+        $original = imagecreatefrompng($p);
+                
+        $size       = getimagesize($this->image);
         $width      = $size[0];
         $height     = $size[1];
         $reflection = $param*0.3; // Reflection height
@@ -555,6 +555,6 @@ class Laika_Image extends Laika{
         $new = imagecreatetruecolor($width, $height+$reflection);
         imagecopymerge($new, $this->image, 0, $height, 0, 0, $width, $reflection, $transparency);
         imagecopymerge($new, $original, 0, 0, 0, 0, $width, $height, 100);
-        $this->image = $new; 	    
-	}   
+        $this->image = $new;        
+    }   
 }

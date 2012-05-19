@@ -1,35 +1,35 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Avatar.php
+ *  @filesource     Avatar.php
  *
- *	@version        0.1.0b
- *	@date           2012-05-18 22:02:27 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @date           2012-05-18 22:02:27 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  * Laika_Avatar class.
  * 
- *	@package        Laika
- *	@subpackage     module
- *	@category       util
+ *  @package        Laika
+ *  @subpackage     module
+ *  @category       util
  *
  *  @extends        Laika
  */
 class Laika_Avatar extends Laika {
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------
 
     //protected static $url;
 
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------
 
     /**
@@ -58,19 +58,19 @@ class Laika_Avatar extends Laika {
      * @source http://gravatar.com/site/implement/images/php/
      */
     public static function get_gravatar( $email, $s, $d = '', $r = 'g', $img = true, $atts = array() ) {
-    	
-    	$d = urlencode(Laika_Image::api_path('/images/missing.png', 'square', $s));
-    	
-    	$url = 'http://www.gravatar.com/avatar/';
-    	$url .= md5( strtolower( trim( $email ) ) );
-    	$url .= "?s=$s&d=$d&r=$r";
-    	
-    	if ( $img ) {
-    		$url = '<img src="' . $url . '" class="avatar"';
-    		foreach ( $atts as $key => $val )
-    			$url .= ' ' . $key . '="' . $val . '"';
-    		$url .= ' />';
-    	}
-    	return $url;
+        
+        $d = urlencode(Laika_Image::api_path('/images/missing.png', 'square', $s));
+        
+        $url = 'http://www.gravatar.com/avatar/';
+        $url .= md5( strtolower( trim( $email ) ) );
+        $url .= "?s=$s&d=$d&r=$r";
+        
+        if ( $img ) {
+            $url = '<img src="' . $url . '" class="avatar"';
+            foreach ( $atts as $key => $val )
+                $url .= ' ' . $key . '="' . $val . '"';
+            $url .= ' />';
+        }
+        return $url;
     }
 }

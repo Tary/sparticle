@@ -1,22 +1,22 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Abstract_Exception.php
+ *  @filesource     Abstract_Exception.php
  *
- *	@version        0.1.0b
- *	@date           2011-05-22 08:50:52 -0400 (Sun, 22 May 2011)
+ *  @version        0.1.0b
+ *  @date           2011-05-22 08:50:52 -0400 (Sun, 22 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Abstract Laika_Abstract_Exception class.
  *
- *	@package        Laika
- *	@subpackage     core
- *	@category       abstract
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       abstract
  *
  *  @abstract
  *  @extends        Exception
@@ -25,7 +25,7 @@
 abstract class Laika_Abstract_Exception extends Exception implements Laika_Interface_Exception{
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------
     protected $message = 'Unknown exception';     // Exception message
     private   $string;                            // Unknown
@@ -35,7 +35,7 @@ abstract class Laika_Abstract_Exception extends Exception implements Laika_Inter
     private   $trace;                             // Unknown
 
 //-------------------------------------------------------------------
-//	CONSTRUCTOR
+//  CONSTRUCTOR
 //-------------------------------------------------------------------
 
     /**

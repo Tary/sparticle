@@ -1,22 +1,22 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Abstract_Singleton_Model.php
+ *  @filesource     Abstract_Singleton_Model.php
  *
- *	@version        0.1.0b
- *	@date           2012-05-18 21:48:30 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @date           2012-05-18 21:48:30 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Abstract Laika_Abstract_Singleton_Model class.
  *
- *	@package        Laika
- *	@subpackage     core
- *	@category       abstract
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       abstract
  * 
  *  @abstract
  *  @extends        Laika_Singleton
@@ -34,7 +34,7 @@ abstract class Laika_Abstract_Singleton_Model extends Laika_Singleton implements
     protected        $updated;
 
 //-------------------------------------------------------------------
-//	CONSTRUCTOR
+//  CONSTRUCTOR
 //-------------------------------------------------------------------
 
     /**
@@ -59,7 +59,7 @@ abstract class Laika_Abstract_Singleton_Model extends Laika_Singleton implements
 
 
 //-------------------------------------------------------------------
-//	SETTER & GETTER METHODS
+//  SETTER & GETTER METHODS
 //-------------------------------------------------------------------
     /**
      * dbset function.
@@ -99,7 +99,7 @@ abstract class Laika_Abstract_Singleton_Model extends Laika_Singleton implements
 
     
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------
     /**
      * load function.

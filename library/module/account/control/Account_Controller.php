@@ -1,29 +1,29 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Account_Controller.php
+ *  @filesource     Account_Controller.php
  *
- *	@version        0.1.0b
- *	@date           2012-05-18 21:56:43 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @date           2012-05-18 21:56:43 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /** 
  *  Laika_Account_Controller class.
  * 
- *	@package        Laika
- *	@subpackage     module
- *	@category       control
+ *  @package        Laika
+ *  @subpackage     module
+ *  @category       control
  *
  *  @extends        Laika_Abstract_Page_Controller
  */
 class Laika_Account_Controller extends Laika_Abstract_Page_Controller {
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------
 
     protected static $instance;
@@ -33,7 +33,7 @@ class Laika_Account_Controller extends Laika_Abstract_Page_Controller {
     protected        $ignore       = array('action_handler','validate','add_user', 'send_confirmation', 'display_validation_errors', 'check_username');
     
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------
 
     /**

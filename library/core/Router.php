@@ -1,29 +1,29 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource 	Router.php
+ *  @filesource     Router.php
  *
- *	@version    	0.1.0b
- *	@date       	2010-01-19 01:27:51 -0500 (Tue, 19 Jan 2010)
+ *  @version        0.1.0b
+ *  @date           2010-01-19 01:27:51 -0500 (Tue, 19 Jan 2010)
  *
- *	@author     	Leonard M. Witzel <witzel@post.harvard.edu> 
- *	@copyright  	Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu> 
+ *  @copyright      Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
  *
  */
 /**
  *  Laika_Router class.
  * 
- *	@package    	Laika
- *	@subpackage 	core
- *	@category   	
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       
  * 
  *  @extends Laika_Singleton
  */
 class Laika_Router extends Laika_Singleton{
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------
     protected static $instance;
     private          $commands;
@@ -32,7 +32,7 @@ class Laika_Router extends Laika_Singleton{
     //protected        $redirect;
 
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------
     /**
      * configure function.

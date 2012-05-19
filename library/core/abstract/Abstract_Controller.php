@@ -1,22 +1,22 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Abstract_Controller.php
+ *  @filesource     Abstract_Controller.php
  *
- *	@version        0.1.0b
- *	@date           2011-05-22 04:34:23 -0400 (Sun, 22 May 2011)
+ *  @version        0.1.0b
+ *  @date           2011-05-22 04:34:23 -0400 (Sun, 22 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Abstract Laika_Abstract_Controller class.
  *
- *	@package        Laika
- *	@subpackage     core
- *	@category       abstract
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       abstract
  * 
  *  @abstract
  *  @extends        Laika_Singleton

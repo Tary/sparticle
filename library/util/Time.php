@@ -1,22 +1,22 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Time.php
+ *  @filesource     Time.php
  *
- *	@version        0.1.0b
- *	@date           2011-05-21 03:51:46 -0400 (Sat, 21 May 2011)
+ *  @version        0.1.0b
+ *  @date           2011-05-21 03:51:46 -0400 (Sat, 21 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Laika_Time class.
  *
- *	@package        Laika
- *	@subpackage     util     
- *	@category       utility
+ *  @package        Laika
+ *  @subpackage     util     
+ *  @category       utility
  *
  *  @extends        Laika
  */

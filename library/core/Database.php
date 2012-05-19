@@ -1,14 +1,14 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Database.php
+ *  @filesource     Database.php
  *
- *	@version        0.1.0b
- *	@date           2010-01-20 17:06:20 -0500 (Wed, 20 Jan 2010)
+ *  @version        0.1.0b
+ *  @date           2010-01-20 17:06:20 -0500 (Wed, 20 Jan 2010)
  *
- *	@author         Leonard M. Witzel <leonard_witzel@harvard.edu>
- *	@copyright      Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
+ *  @author         Leonard M. Witzel <leonard_witzel@harvard.edu>
+ *  @copyright      Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
  *
  */
 /**
@@ -16,23 +16,23 @@
  *
  *  Main wrapper class to abstract database transactions.
  *
- *	@package        Laika
- *	@subpackage     core
- *	@category       database
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       database
  *
  *  @extends        Laika_Abstract_Socket_Service
  */
 class Laika_Database extends Laika_Abstract_Socket_Service{
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------
     protected static $instance;
     private   static $database;
     private   static $driver;
     
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------    
     
     /**

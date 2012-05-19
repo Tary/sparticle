@@ -1,14 +1,14 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Mysql.php
+ *  @filesource     Mysql.php
  *
- *	@version        0.1.0b
- *	@date           2011-05-21 03:53:51 -0400 (Sat, 21 May 2011)
+ *  @version        0.1.0b
+ *  @date           2011-05-21 03:53:51 -0400 (Sat, 21 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
@@ -18,9 +18,9 @@
  * 
  *  Unimplemented.
  *
- *	@package        Laika
- *	@subpackage     util
- *	@category       database
+ *  @package        Laika
+ *  @subpackage     util
+ *  @category       database
  *
  *  @extends        Laika_Singleton
  *  @implements     Laika_Interface_DB_Driver

@@ -1,14 +1,14 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Pdo_Driver.php
+ *  @filesource     Pdo_Driver.php
  *
- *	@version        0.1.0b
- *	@date           2011-06-08 00:17:06 -0400 (Wed, 8 Jun 2011)
+ *  @version        0.1.0b
+ *  @date           2011-06-08 00:17:06 -0400 (Wed, 8 Jun 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
@@ -18,9 +18,9 @@
  *  but this allows for a failsafe if PDO may be misconfigured on the Server
  *  as is the case with standard MySQL + php install on OSX.
  * 
- *	@package        Laika
- *	@subpackage     util
- *	@category       database
+ *  @package        Laika
+ *  @subpackage     util
+ *  @category       database
  *
  *  @extends        Laika_Singleton
  *  @implements     Laika_Interface_DB_Driver

@@ -1,14 +1,14 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Bootstrap.php
+ *  @filesource     Bootstrap.php
  *
- *	@version        0.1.0b
- *	@date           2010-01-19 02:50:27 -0500 (Tue, 19 Jan 2010)
+ *  @version        0.1.0b
+ *  @date           2010-01-19 02:50:27 -0500 (Tue, 19 Jan 2010)
  *
- *	@author         Leonard M. Witzel <leonard_witzel@harvard.edu>
- *	@copyright      Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
+ *  @author         Leonard M. Witzel <leonard_witzel@harvard.edu>
+ *  @copyright      Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
  *
  */
 /** 
@@ -16,16 +16,16 @@
  * 
  *  System Boot Loader
  *
- *	@package        Laika
- *	@subpackage     kernel
- *	@category       boot
+ *  @package        Laika
+ *  @subpackage     kernel
+ *  @category       boot
  *
  *  @final
  */
 final class Laika_Bootstrap{
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------    
     /**
      * BOOT_REGISTRY
@@ -42,10 +42,10 @@ final class Laika_Bootstrap{
      */
     public static $BOOT_REGISTRY = array();
 
-	
+    
     
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------    
     /**
      * set_paths function.
@@ -120,7 +120,7 @@ final class Laika_Bootstrap{
      */
     private static function load_application_library($class_name){    
 
-	   self::$BOOT_REGISTRY['APP'] = array( APP_CONTROL, APP_VIEW_LOGIC, APP_MODEL, APP_UTIL, APP_PLUGIN );
+       self::$BOOT_REGISTRY['APP'] = array( APP_CONTROL, APP_VIEW_LOGIC, APP_MODEL, APP_UTIL, APP_PLUGIN );
             
         foreach (self::$BOOT_REGISTRY['APP'] as $directory){          
 
@@ -153,18 +153,18 @@ final class Laika_Bootstrap{
      */
     private static function set_reporting() {
         if (DEVELOPMENT_ENVIRONMENT == true) {
-        	error_reporting(E_ALL ^ E_DEPRECATED);
-        	ini_set('display_errors','On');
-        	ini_set('error_log', LOG_DIRECTORY.'/error.log');
+            error_reporting(E_ALL ^ E_DEPRECATED);
+            ini_set('display_errors','On');
+            ini_set('error_log', LOG_DIRECTORY.'/error.log');
             require_once(LAIKA_ROOT.'/library/ext/FirePHPCore/FirePHP.class.php');
-            //ob_start(OB_HANDLER);       	
+            //ob_start(OB_HANDLER);         
 
         } 
         else {
-        	error_reporting(E_ALL);
-        	ini_set('display_errors','Off');
-        	ini_set('log_errors',TRUE);
-        	ini_set('error_log', LOG_DIRECTORY.'/error.log');
+            error_reporting(E_ALL);
+            ini_set('display_errors','Off');
+            ini_set('log_errors',TRUE);
+            ini_set('error_log', LOG_DIRECTORY.'/error.log');
         }
     }
     

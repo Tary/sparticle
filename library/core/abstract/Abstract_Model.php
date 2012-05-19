@@ -1,24 +1,24 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Abstract_Model.php
+ *  @filesource     Abstract_Model.php
  *
- *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       abstract
- *	@date           2012-05-18 21:47:09 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       abstract
+ *  @date           2012-05-18 21:47:09 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /**
  * Abstract Laika_Abstract_Model class.
  *
- *	@package        Laika
- *	@subpackage     core 
+ *  @package        Laika
+ *  @subpackage     core 
  *
  *  @abstract
  *  @extends        Laika
@@ -40,7 +40,7 @@ abstract class Laika_Abstract_Model extends Laika implements Laika_Interface_Mod
     protected        $updated;
     
 //-------------------------------------------------------------------
-//	CONSTRUCTOR
+//  CONSTRUCTOR
 //-------------------------------------------------------------------    
     /**
      * __construct function.
@@ -58,7 +58,7 @@ abstract class Laika_Abstract_Model extends Laika implements Laika_Interface_Mod
     }
 
 //-------------------------------------------------------------------
-//	SETTER & GETTER METHODS
+//  SETTER & GETTER METHODS
 //-------------------------------------------------------------------    
     /**
      * dbset function.
@@ -92,7 +92,7 @@ abstract class Laika_Abstract_Model extends Laika implements Laika_Interface_Mod
     
     
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------
     /**
      * load function.

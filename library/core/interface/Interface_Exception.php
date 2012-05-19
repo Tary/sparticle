@@ -1,29 +1,29 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Interface_Exception.php
+ *  @filesource     Interface_Exception.php
  *
- *	@version        0.1.0b
- *	@date           2011-05-22 08:52:15 -0400 (Sun, 22 May 2011)
+ *  @version        0.1.0b
+ *  @date           2011-05-22 08:52:15 -0400 (Sun, 22 May 2011)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /** 
  *  Laika_Interface_Exception interface.
  * 
- *	@package        Laika
- *	@subpackage     core
- *	@category       interface
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       interface
  *
  *  @interface
  */
 interface Laika_Interface_Exception{
 
 //-------------------------------------------------------------------
-//	CONSTRUCTOR
+//  CONSTRUCTOR
 //-------------------------------------------------------------------
     /**
      * __construct function.
@@ -38,7 +38,7 @@ interface Laika_Interface_Exception{
     public function __construct($message = null, $code = 0);
 
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------
     /**
      * __toString function.

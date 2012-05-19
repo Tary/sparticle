@@ -1,29 +1,29 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource 	Command.php
+ *  @filesource     Command.php
  *
- *	@version 	    0.1.0b
- *	@date       	2010-01-18 22:21:21 -0500 (Mon, 18 Jan 2010)
+ *  @version        0.1.0b
+ *  @date           2010-01-18 22:21:21 -0500 (Mon, 18 Jan 2010)
  *
- *	@author     	Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright  	Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
  */
 /**
  * Laika_Command class.
  * 
- *	@package 	    Laika
- *	@subpackage     core
- *	@category       control
+ *  @package        Laika
+ *  @subpackage     core
+ *  @category       control
  *
  *  @extends        Laika
  */
 class Laika_Command extends Laika{
 
 //-------------------------------------------------------------------
-//	VARIABLES
+//  VARIABLES
 //-------------------------------------------------------------------
 
     private $class_name  = NULL;
@@ -32,7 +32,7 @@ class Laika_Command extends Laika{
     
 
 //-------------------------------------------------------------------
-//	CONSTRUCTOR
+//  CONSTRUCTOR
 //-------------------------------------------------------------------     
     /**
      * __construct function.
@@ -56,7 +56,7 @@ class Laika_Command extends Laika{
     }    
 
 //-------------------------------------------------------------------
-//	METHODS
+//  METHODS
 //-------------------------------------------------------------------    
     /**
      * validate_command function.

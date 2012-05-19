@@ -1,28 +1,28 @@
 <?php
 /**
- *	LAIKA FRAMEWORK Release Notes:
+ *  LAIKA FRAMEWORK Release Notes:
  *
- *	@filesource     Account_Page.php
+ *  @filesource     Account_Page.php
  *
- *	@version        0.1.0b
- *	@date           2012-05-18 21:59:20 -0400 (Fri, 18 May 2012)
+ *  @version        0.1.0b
+ *  @date           2012-05-18 21:59:20 -0400 (Fri, 18 May 2012)
  *
- *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
  */
 /** 
  *  Laika_Account_Page class.
  * 
- *	@package        Laika
- *	@subpackage     module
- *	@category       view
+ *  @package        Laika
+ *  @subpackage     module
+ *  @category       view
  *
  *  @extends        Laika_Abstract_Page
  */
 class Laika_Account_Page extends Laika_Abstract_Page{
 
-	protected static $instance;
+    protected static $instance;
 
     /**
      * add_component function.

@@ -13,11 +13,15 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/**
+ *  Abstract Laika_Abstract_Page_Controller class.
  *
- * Abstract Laika_Abstract_Page_Controller class.
- * 
- * @abstract
- * @extends Laika_Abstract_Controller
+ *	@package        Laika
+ *	@subpackage     core
+ *
+ *  @abstract
+ *  @extends        Laika_Abstract_Controller
  */
 abstract class Laika_Abstract_Page_Controller extends Laika_Abstract_Controller{
     

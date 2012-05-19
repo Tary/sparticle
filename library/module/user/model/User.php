@@ -5,20 +5,22 @@
  *	@filesource     User.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     module
- *	@category       model
  *	@date           2012-05-18 22:05:59 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/** 
+ *  Laika_User class.
  *
- * Laika_User class.
- *
- * User class with methods coupling it with the Active User class
+ *  User class with methods coupling it with the Active User class
  * 
- * @extends Laika_Abstract_Model
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       model
+ *
+ *  @extends        Laika_Abstract_Model
  */
 class Laika_User extends Laika_Abstract_Model{
 
@@ -172,6 +174,14 @@ class Laika_User extends Laika_Abstract_Model{
         return $this->logged_in;      
     }
     
+    /**
+     * avatar function.
+     * 
+     * @access public
+     * @param mixed $size
+     * @param mixed $options (default: NULL)
+     * @return void
+     */
     public function avatar($size,$options=NULL){
         
         $attributes = "";        
@@ -182,6 +192,12 @@ class Laika_User extends Laika_Abstract_Model{
         return $link.Laika_Avatar::img($this->email,$size).'</a>';
     }
     
+    /**
+     * link_to_user function.
+     * 
+     * @access public
+     * @return void
+     */
     public function link_to_user(){
         if(func_num_args()==1):
             $text = $this->username;

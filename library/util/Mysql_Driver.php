@@ -5,20 +5,25 @@
  *	@filesource     Mysql.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     util
- *	@category       database
  *	@date           2011-05-21 03:53:51 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/**
+ *  Laika_Mysql_Driver class.
  *
- * Laika_Mysql class.
+ *  Database wrapper object using mysqli
+ * 
+ *  Unimplemented.
  *
- * Database wrapper object using mysqli
+ *	@package        Laika
+ *	@subpackage     util
+ *	@category       database
  *
- * Unimplemented.
+ *  @extends        Laika_Singleton
+ *  @implements     Laika_Interface_DB_Driver
  */
 class Laika_Mysql_Driver extends Laika_Singleton implements Laika_Interface_DB_Driver{
 

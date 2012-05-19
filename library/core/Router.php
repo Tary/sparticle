@@ -5,18 +5,20 @@
  *	@filesource 	Router.php
  *
  *	@version    	0.1.0b
- *	@package    	Laika
- *	@subpackage 	core
- *	@category   	
  *	@date       	2010-01-19 01:27:51 -0500 (Tue, 19 Jan 2010)
  *
  *	@author     	Leonard M. Witzel <witzel@post.harvard.edu> 
  *	@copyright  	Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
  *
- *
- * Laika_Router class.
+ */
+/**
+ *  Laika_Router class.
  * 
- * @extends Laika_Singleton
+ *	@package    	Laika
+ *	@subpackage 	core
+ *	@category   	
+ * 
+ *  @extends Laika_Singleton
  */
 class Laika_Router extends Laika_Singleton{
 

@@ -5,18 +5,20 @@
  *	@filesource     Registry.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       
  *	@date           2012-05-18 21:55:18 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
- * Laika_Registry class.
+ */
+/**
+ *  Laika_Registry class.
  * 
- * @extends Laika_Abstract_Registry
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ * 
+ *  @extends        Laika_Abstract_Registry
  */
 class Laika_Registry extends Laika_Abstract_Registry{
 

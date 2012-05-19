@@ -5,20 +5,22 @@
  *	@filesource     Abstract_Singleton_Model.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       abstract
  *	@date           2012-05-18 21:48:30 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/**
+ *  Abstract Laika_Abstract_Singleton_Model class.
  *
- * Abstract Laika_Abstract_Singleton_Model class.
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       abstract
  * 
- * @abstract
- * @extends Laika_Singleton
- * @implements Laika_Interface_Model
+ *  @abstract
+ *  @extends        Laika_Singleton
+ *  @implements     Laika_Interface_Model
  */
 abstract class Laika_Abstract_Singleton_Model extends Laika_Singleton implements Laika_Interface_Model{
 

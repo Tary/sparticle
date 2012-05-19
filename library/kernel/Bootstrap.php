@@ -5,19 +5,22 @@
  *	@filesource     Bootstrap.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     kernel
- *	@category       boot
  *	@date           2010-01-19 02:50:27 -0500 (Tue, 19 Jan 2010)
  *
  *	@author         Leonard M. Witzel <leonard_witzel@harvard.edu>
  *	@copyright      Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
  *
- *
- * Laika_Bootstrap class.
+ */
+/** 
+ *  Laika_Bootstrap class.
  * 
- * System Boot Loader
+ *  System Boot Loader
  *
+ *	@package        Laika
+ *	@subpackage     kernel
+ *	@category       boot
+ *
+ *  @final
  */
 final class Laika_Bootstrap{
 

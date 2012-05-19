@@ -5,18 +5,20 @@
  *	@filesource     File.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     util
- *	@category       file
  *	@date           2012-05-18 22:09:04 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
+ */
+/**
  * Laika_File class.
  * 
- * @extends Laika
+ *	@package        Laika
+ *	@subpackage     util
+ *	@category       file
+ *
+ *  @extends        Laika
  */
 class Laika_File extends Laika{
     

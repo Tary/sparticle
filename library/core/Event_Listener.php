@@ -5,16 +5,21 @@
  *	@filesource     Event_Listener.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       
  *	@date           2011-05-21 03:15:10 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/**
+ *  Laika_Event_Listener class.
  *
- * Laika_Event_Listener class.
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ * 
+ *  @extends Laika_Singleton
+ *  @implements SPLObserver
  */
 class Laika_Event_Listener extends Laika_Singleton implements SPLObserver{
     

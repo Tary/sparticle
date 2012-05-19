@@ -5,18 +5,20 @@
  *	@filesource     Home_Controller.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     module
- *	@category       control
  *	@date           2011-05-21 03:37:00 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
- *
- * Laika_Error_Controller class.
+ */
+/** 
+ *  Laika_Error_Controller class.
  * 
- * @extends Laika_Abstract_Page_Controller
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       control
+ *
+ *  @extends        Laika_Abstract_Page_Controller
  */
 class Laika_Error_Controller extends Laika_Abstract_Page_Controller{
 

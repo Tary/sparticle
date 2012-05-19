@@ -5,18 +5,20 @@
  *	@filesource     Data.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     util
- *	@category       data
  *	@date           2011-05-21 03:54:15 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/**
+ *  Laika_Data class.
  *
- * Laika_Data class.
+ *	@package        Laika
+ *	@subpackage     util
+ *	@category       data
  *
- * @extends Laika
+ *  @extends        Laika
  */
 class Laika_Data extends Laika{
 

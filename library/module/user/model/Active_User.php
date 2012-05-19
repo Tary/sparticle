@@ -5,21 +5,22 @@
  *	@filesource     Active_User.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     module
- *	@category       model
  *	@date           2012-05-18 22:05:37 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/** 
+ *  Laika_Active_User class.
  *
- * Laika_Active_User class.
- *
- * Class representing the user currently logged in.
- * A Singleton representation of the User Model Class.
+ *  Class representing the user currently logged in.
+ *  A Singleton representation of the User Model Class.
  * 
- * @extends Laika_Abstract_Singleton_Model
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       model
+ *  @extends        Laika_Abstract_Singleton_Model
  */
 class Laika_Active_User extends Laika_Abstract_Singleton_Model{
 

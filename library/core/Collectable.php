@@ -5,18 +5,20 @@
  *	@filesource     Collectable.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       
  *	@date           2012-05-18 21:53:52 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
- * Laika_Collectable class.
+ */
+/**
+ *  Laika_Collectable class.
  * 
- * @extends Laika
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ *
+ *  @extends        Laika
  */
 class Laika_Collectable extends Laika{
 

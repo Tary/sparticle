@@ -5,19 +5,22 @@
  *	@filesource 	Laika.php
  *
  *	@version    	0.1.0b
- *	@package    	Laika
- *	@subpackage 	core
- *	@category   	superclass
  *	@date       	2010-01-18 02:29:45 -0500 (Mon, 18 Jan 2010)
  * 
  *	@author 	    Leonard M. Witzel <leonard_witzel@harvard.edu> 
  *	@copyright  	Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
- *
+ */
+/**
  * Laika class.
+ *
+ *  Framework Superclass 
+ *
+ *	@package    	Laika
+ *	@subpackage 	core
+ *	@category   	superclass
  * 
- * Framework Superclass
- * 
+ *  @abstract  
  */
 abstract class Laika{
 

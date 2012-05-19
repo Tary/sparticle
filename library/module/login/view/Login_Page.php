@@ -5,18 +5,20 @@
  *	@filesource     Login_Page.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     module
- *	@category       view
  *	@date           2012-05-18 22:01:33 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
+ */
+/** 
  * Laika_Login_Page class.
  * 
- * @extends Laika_Abstract_Page
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       view
+ *
+ *  @extends        Laika_Abstract_Page
  */
 class Laika_Login_Page extends Laika_Abstract_Page{
 

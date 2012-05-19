@@ -5,20 +5,22 @@
  *	@filesource     Abstract_Exception.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       abstract
  *	@date           2011-05-22 08:50:52 -0400 (Sun, 22 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/**
+ *  Abstract Laika_Abstract_Exception class.
  *
- * Abstract Laika_Abstract_Exception class.
- * 
- * @abstract
- * @extends    Exception
- * @implements Laika_Interface_Exception
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       abstract
+ *
+ *  @abstract
+ *  @extends        Exception
+ *  @implements     Laika_Interface_Exception
  */
 abstract class Laika_Abstract_Exception extends Exception implements Laika_Interface_Exception{
 

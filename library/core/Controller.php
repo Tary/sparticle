@@ -5,18 +5,20 @@
  *	@filesource 	Controller.php
  *
  *	@version    	0.1.0b
- *	@package    	Laika
- *	@subpackage 	core
- *	@category 	    control
  *	@date       	2010-01-18 03:02:34 -0500 (Mon, 18 Jan 2010)
  *
  *	@author     	Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright 	    Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
- *
- * Laika_Controller class.
+ */
+/**
+ *  Laika_Controller class.
  * 
- * @extends Laika_Abstract_Controller
+ *	@package    	Laika
+ *	@subpackage 	core
+ *	@category 	    control
+ *
+ *  @extends        Laika_Abstract_Controller
  */
 class Laika_Controller extends Laika_Abstract_Controller{
 

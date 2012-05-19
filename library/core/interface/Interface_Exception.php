@@ -5,18 +5,20 @@
  *	@filesource     Interface_Exception.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       interface
  *	@date           2011-05-22 08:52:15 -0400 (Sun, 22 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
- *
- * Laika_Interface_Exception interface.
+ */
+/** 
+ *  Laika_Interface_Exception interface.
  * 
- * @interface
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       interface
+ *
+ *  @interface
  */
 interface Laika_Interface_Exception{
 

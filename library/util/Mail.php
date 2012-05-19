@@ -5,18 +5,20 @@
  *	@filesource     Mail.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     util
- *	@category       
  *	@date           2012-05-18 22:10:23 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
+ */
+/**
  * Laika_Mail class.
  * 
- * @extends Laika
+ *	@package        Laika
+ *	@subpackage     util
+ *	@category       
+ *
+ *  @extends        Laika
  */
 class Laika_Mail extends Laika{
 

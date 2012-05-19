@@ -13,11 +13,15 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
+ */
+/**
  * Abstract Laika_Abstract_Page class.
- * 
- * @abstract
- * @extends Laika_Singleton
+ *
+ *	@package        Laika
+ *	@subpackage     core
+ *
+ *  @abstract
+ *  @extends        Laika_Singleton
  */
 abstract class Laika_Abstract_Page extends Laika_Singleton{
 

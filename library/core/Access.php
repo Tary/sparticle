@@ -5,21 +5,23 @@
  *	@filesource     Access.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       
  *	@date           2012-05-18 21:54:23 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
- * Laika_Access class.
+ */
+/**
+ *  Laika_Access class.
  * 
- * Basic layer access class.
- * This class should be agnostic of User and Login classes and modules.
+ *  Basic layer access class.
+ *  This class should be agnostic of User and Login classes and modules.
  *
- * @extends Laika_Singleton
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ *
+ *  @extends        Laika_Singleton
  */
 class Laika_Access extends Laika_Singleton{
 

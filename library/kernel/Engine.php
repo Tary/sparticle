@@ -5,21 +5,23 @@
  *	@filesource 	Engine.php
  *
  *	@version    	0.1.0b
- *	@package    	Laika
- *	@subpackage 	kernel
- *	@category   	engine
  *	@date       	2010-01-18 02:29:45 -0500 (Mon, 18 Jan 2010)
  * 
  *	@author     	Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright  	Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
+ */
+/** 
+ *  LaikaEngine class.
+ * 
+ *  Framework Engine
  *
- * LaikaEngine class.
+ *	@package    	Laika
+ *	@subpackage 	kernel
+ *	@category   	engine
  * 
- * Framework Engine
- * 
- * @extends Laika
- * @final 
+ *  @extends Laika
+ *  @final 
  */
  
 final class Laika_Engine{

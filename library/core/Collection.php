@@ -13,10 +13,15 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
- * Laika_Collection class.
+ */
+/**
+ *  Laika_Collection class.
  * 
- * @extends ArrayObject
+ *	@package    	Laika
+ *	@subpackage 	core
+ *	@category   	control
+ * 
+ *  @extends        ArrayObject
  */
 class Laika_Collection extends ArrayObject{
 

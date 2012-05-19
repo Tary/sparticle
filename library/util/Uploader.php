@@ -5,18 +5,20 @@
  *	@filesource     Uploader.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     util
- *	@category       file
  *	@date           2012-05-18 22:10:55 -0400 (Fri, 18 May 2012)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- *
- * Laika_Uploader class.
+ */
+/**
+ *  Laika_Uploader class.
  * 
- * @extends Laika_Singleton
+ *	@package        Laika
+ *	@subpackage     util
+ *	@category       file
+ *
+ *  @extends        Laika_Singleton
  */
 class Laika_Uploader extends Laika_Singleton {
 
@@ -62,6 +64,14 @@ class Laika_Uploader extends Laika_Singleton {
         //throw new Laika_Exception('UPLOAD_MOVE_ERROR',$error);
     }
     
+    /**
+     * upload_error function.
+     * 
+     * @access public
+     * @static
+     * @param mixed $error
+     * @return void
+     */
     public static function upload_error($error){
         Laika_Event::dispatch('UPLOAD_ERROR',$error);
     }

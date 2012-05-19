@@ -5,18 +5,20 @@
  *	@filesource     Error.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       error
  *	@date           2011-05-21 03:14:48 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ */
+/**
+ *  Laika_Error class.
  *
- * Laika_Error class.
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       error
  * 
- * @extends Laika_Singleton
+ *  @extends        Laika_Singleton
  */
 class Laika_Error extends Laika_Singleton{
 

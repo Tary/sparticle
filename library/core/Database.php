@@ -5,20 +5,22 @@
  *	@filesource     Database.php
  *
  *	@version        0.1.0b
- *	@package        Laika
- *	@subpackage     core
- *	@category       database
  *	@date           2010-01-20 17:06:20 -0500 (Wed, 20 Jan 2010)
  *
  *	@author         Leonard M. Witzel <leonard_witzel@harvard.edu>
  *	@copyright      Copyright (c) 2010  Harvard University <{@link http://lab.dce.harvard.edu}>
  *
+ */
+/**
+ *  Laika_Database class.
  *
- * Laika_Database class.
+ *  Main wrapper class to abstract database transactions.
  *
- * Main wrapper class to abstract database transactions.
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       database
  *
- * @extends Laika_Abstract_Socket_Service
+ *  @extends        Laika_Abstract_Socket_Service
  */
 class Laika_Database extends Laika_Abstract_Socket_Service{
 

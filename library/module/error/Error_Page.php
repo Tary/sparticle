@@ -13,8 +13,7 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- */
-/**
+ *
  * Laika_Error_Page class.
  * 
  * @extends Laika_Abstract_Page

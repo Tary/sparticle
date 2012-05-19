@@ -13,16 +13,15 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ *
+ * Abstract Laika_Singleton class.
+ * 
+ * Base class for all objects employing the Singleton pattern.
+ *
+ * @abstract
+ * @extends Laika
  */
- /**
-  * Abstract Laika_Singleton class.
-  * 
-  * Base class for all objects employing the Singleton pattern.
-  *
-  * @abstract
-  * @extends Laika
-  */
- abstract class Laika_Singleton extends Laika{
+abstract class Laika_Singleton extends Laika{
 
 //-------------------------------------------------------------------
 //	PROPERTIES

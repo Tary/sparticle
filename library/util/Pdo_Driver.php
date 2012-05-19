@@ -13,8 +13,7 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
- */
-/**
+ *
  * Laika_Pdo_Driver class.
  *
  * Wrapping PDO in another layer of abstraction may seem silly,

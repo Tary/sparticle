@@ -13,6 +13,10 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ *
+ * Laika_Error_Controller class.
+ * 
+ * @extends Laika_Abstract_Page_Controller
  */
 class Laika_Error_Controller extends Laika_Abstract_Page_Controller{
 

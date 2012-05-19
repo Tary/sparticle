@@ -13,9 +13,10 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
- */
-/**
+ *
  * Laika_Time class.
+ *
+ * @extends Laika
  */
 class Laika_Time extends Laika{
 

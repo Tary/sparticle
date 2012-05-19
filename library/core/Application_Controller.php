@@ -13,9 +13,7 @@
  *	@author     	Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright  	Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
- */
-
-/**
+ *
  * Laika_Application_Controller class.
  * 
  * @extends Laika_Abstract_Controller

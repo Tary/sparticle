@@ -13,8 +13,7 @@
  *	@author 	    Leonard M. Witzel <leonard_witzel@harvard.edu> 
  *	@copyright  	Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
- */
- /**
+ *
  * Laika class.
  * 
  * Framework Superclass

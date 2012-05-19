@@ -13,6 +13,11 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
  *
+ *
+ * Laika_Exception_Logger class.
+ * 
+ * @extends Laika
+ * @implements SPLObserver
  */
 class Laika_Exception_Logger extends Laika implements SPLObserver{
 

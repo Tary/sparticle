@@ -13,8 +13,7 @@
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
  *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
  *
- */
-/**
+ *
  * Laika_Collection class.
  * 
  * @extends ArrayObject

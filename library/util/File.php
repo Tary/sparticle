@@ -12,7 +12,7 @@
  *
  */
 /**
- * Laika_File class.
+ *  Laika_File class.
  * 
  *  @package        Laika
  *  @subpackage     util

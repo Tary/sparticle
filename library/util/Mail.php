@@ -12,7 +12,7 @@
  *
  */
 /**
- * Laika_Mail class.
+ *  Laika_Mail class.
  * 
  *  @package        Laika
  *  @subpackage     util

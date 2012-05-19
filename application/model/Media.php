@@ -1,5 +1,25 @@
 <?php
-class FOLIO_Media extends LAIKA_Abstract_Model{
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Media.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     model
+ *	@category       model
+ *	@date           2012-05-18 21:36:20 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Sparticle_Media class.
+ * 
+ * @extends Laika_Abstract_Model
+ */
+class Sparticle_Media extends Laika_Abstract_Model{
 
 //-------------------------------------------------------------------
 //	PROPERTIES

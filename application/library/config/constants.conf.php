@@ -1,4 +1,20 @@
 <?php 
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     constants.conf.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     config
+ *	@category       config
+ *	@date           2012-05-19 00:06:17 -0400 (Sat, 19 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+
     define( 'WEBFONT', '<span class="webfont' );
     define( 'ENTYPO' , '<span class="entypo'  );
     

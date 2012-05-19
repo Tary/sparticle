@@ -5,9 +5,9 @@
  *	@filesource     Abstract_Registry.php
  *
  *	@version        0.1.0b
- *	@package        laika
- *	@subpackage     abstract
- *	@category       
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       abstract
  *	@date           2011-05-21 18:28:12 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
@@ -15,12 +15,12 @@
  *
  */
 /**
- * Abstract LAIKA_Abstract_Registry class.
+ * Abstract Laika_Abstract_Registry class.
  * 
  * @abstract
  * @extends Laika_Singleton
  */
-abstract class LAIKA_Abstract_Registry extends LAIKA_Singleton{
+abstract class Laika_Abstract_Registry extends Laika_Singleton{
 
     /*
     static function add(){}

@@ -1,5 +1,25 @@
 <?php
-class LAIKA_Encryption extends Laika{
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Encryption.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     util
+ *	@category       data
+ *	@date           2012-05-18 22:08:04 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Encryption class.
+ * 
+ * @extends Laika
+ */
+class Laika_Encryption extends Laika{
     
     
 //-------------------------------------------------------------------

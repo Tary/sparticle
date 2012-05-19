@@ -1,10 +1,25 @@
 <?php
 /**
- * LAIKA_Account_Page class.
- * 
- * @extends LAIKA_Abstract_Page
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Account_Page.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       view
+ *	@date           2012-05-18 21:59:20 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
  */
-class LAIKA_Account_Page extends LAIKA_Abstract_Page{
+/**
+ * Laika_Account_Page class.
+ * 
+ * @extends Laika_Abstract_Page
+ */
+class Laika_Account_Page extends Laika_Abstract_Page{
 
 	protected static $instance;
 
@@ -17,7 +32,7 @@ class LAIKA_Account_Page extends LAIKA_Abstract_Page{
      */
     public function add_component($component){
         $class_name = __CLASS__;
-        $page_name  = str_replace(LAIKA_NS,"", $class_name,$count = 1); 
+        $page_name  = str_replace(NAME_SPACE,"", $class_name,$count = 1); 
                 
         if($component == "DEFAULT")
             $page_name = str_replace('_Page',"_Component",$page_name,$count = 1);             

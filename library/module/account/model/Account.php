@@ -1,5 +1,25 @@
 <?php
-class LAIKA_Account extends LAIKA_Abstract_Singleton_Model{
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Account.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       model
+ *	@date           2012-05-18 21:58:08 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Account class.
+ * 
+ * @extends Laika_Abstract_Singleton_Model
+ */
+class Laika_Account extends Laika_Abstract_Singleton_Model{
 
 //-------------------------------------------------------------------
 //	VARIABLES
@@ -24,7 +44,7 @@ class LAIKA_Account extends LAIKA_Abstract_Singleton_Model{
     public static function create($username){
         
         $account = self::init();        
-        $user = LAIKA_User::find('username',$username);              
+        $user = Laika_User::find('username',$username);              
      
         $account->user($user->id);
         $account->token(md5($user->salt().SESSION_TOKEN));

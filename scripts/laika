@@ -8,6 +8,7 @@ include('../config/user.conf.php');
 $args  = $_SERVER["argv"];
 
 define( MYSQL_PATH, "/usr/local/mysql-5.1.53-osx10.6-x86_64/bin/");
+define( AUTHOR, "Leonard M. Witzel <witzel@post.harvard.edu>");
 
 
 switch($args[1]){
@@ -138,6 +139,22 @@ function controller($name){
     $file     = fopen($filename,'w+') or die('Error on file creation');
     
     $content  = '<?php
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     User_Controller.php
+ *
+ *	@version        0.1.0b
+ *	@package        '.CODE_NAME.'
+ *	@subpackage     control
+ *	@category       control
+ *	@date           2012-05-18 21:30:11 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         '.AUTHOR.'
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+     
 class '.CODE_NAME.'_'.format_name($name).'_Controller extends LAIKA_Abstract_Page_Controller {
 
 //-------------------------------------------------------------------

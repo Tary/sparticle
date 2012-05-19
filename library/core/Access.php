@@ -1,14 +1,28 @@
 <?php
-
 /**
- * LAIKA_Access class.
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Access.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ *	@date           2012-05-18 21:54:23 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Access class.
  * 
  * Basic layer access class.
  * This class should be agnostic of User and Login classes and modules.
  *
- * @extends LAIKA_Singleton
+ * @extends Laika_Singleton
  */
-class LAIKA_Access extends LAIKA_Singleton{
+class Laika_Access extends Laika_Singleton{
 
 //-------------------------------------------------------------------
 //	VARIABLES
@@ -30,11 +44,11 @@ class LAIKA_Access extends LAIKA_Singleton{
      */
     public static function init(){    
         if( empty(self::$instance) )      
-            if( LAIKA_Registry::peek(__CLASS__) )                 
-                self::$instance = LAIKA_Registry::get_record(__CLASS__);
+            if( Laika_Registry::peek(__CLASS__) )                 
+                self::$instance = Laika_Registry::get_record(__CLASS__);
             else
                 parent::init();
-        LAIKA_Registry::register(__CLASS__,self::$instance); 
+        Laika_Registry::register(__CLASS__,self::$instance); 
         return self::$instance;    
     }
 
@@ -55,7 +69,7 @@ class LAIKA_Access extends LAIKA_Singleton{
             if($_COOKIE['LAIKA_SESSION'] != $this->token)
                 setcookie('LAIKA_SESSION', $this->token, time() + 31536000, '/');
 
-            LAIKA_Registry::set_record(__CLASS__,self::$instance);
+            Laika_Registry::set_record(__CLASS__,self::$instance);
         }
         if( isset($this->token) )
             $_SESSION['LOGIN_TOKEN']= $this->token;
@@ -71,12 +85,12 @@ class LAIKA_Access extends LAIKA_Singleton{
     public function grant_access(){
         $this->token = SESSION_TOKEN;
         $this->logged_in = true;
-        LAIKA_Registry::set_record(__CLASS__,self::$instance);
+        Laika_Registry::set_record(__CLASS__,self::$instance);
         $_SESSION['LOGIN_TOKEN']=$this->token;
         if (!isset($_COOKIE['LAIKA_SESSION']))
             setcookie('LAIKA_SESSION', $this->token, time() + 31536000, '/');
         
-        LAIKA_Event::dispatch('ACCESS_GRANTED',__FILE__);
+        Laika_Event::dispatch('ACCESS_GRANTED',__FILE__);
     }
     
     /**
@@ -87,12 +101,12 @@ class LAIKA_Access extends LAIKA_Singleton{
      */
     public function destroy_session(){
         unset($_SESSION['LOGIN_TOKEN']);
-        self::$instance = LAIKA_Registry::unregister(__CLASS__);
+        self::$instance = Laika_Registry::unregister(__CLASS__);
         setcookie('LAIKA_SESSION', " ", time()-3600, '/');
         $_SESSION['REDIRECT']=NULL;
-        LAIKA_Controller::process(new LAIKA_Command('DATABASE','DISCONNECT',NULL));        
+        Laika_Controller::process(new Laika_Command('DATABASE','DISCONNECT',NULL));        
 
-        LAIKA_Event::dispatch('TERMINATE_SESSION',__FILE__);        
+        Laika_Event::dispatch('TERMINATE_SESSION',__FILE__);        
     }
     
     /**

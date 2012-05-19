@@ -9,9 +9,9 @@
  *
  *	@filesource 	conf.php
  *	@version    	0.1.0b
- *	@package    	laika
- *	@subpackage     kernel
- *	@category       config file
+ *	@package    	Laika
+ *	@subpackage     config
+ *	@category       config
  *	@date       	010-01-18 01:59:19 -0500 (Mon, 18 Jan 2010)
  *	@author 	    Leonard M. Witzel <leonard_witzel@harvard.edu>
  *
@@ -51,5 +51,5 @@
     //define( 'PUBLIC_DIRECTORY', LAIKA_ROOT.'/public' );
     //define( 'MODULE_FOLDER',         APPLICATION_FOLDER.'/module'         );
     
-    define( 'LAIKA_NS', 'LAIKA_' );
+    define( 'NAME_SPACE', 'Laika_' );
  

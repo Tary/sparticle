@@ -5,7 +5,7 @@
  *	@filesource     Exception_Handler.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     core
  *	@category       
  *	@date           2011-05-22 08:49:46 -0400 (Sun, 22 May 2011)
@@ -15,21 +15,21 @@
  *
  */
 /**
- * LAIKA_Exception_Handler class.
+ * Laika_Exception_Handler class.
  * 
  * Intercepts uncaught exceptions.
  * Notifies Observers of intercepted exceptions.
  *
- * @extends LAIKA_Singleton
+ * @extends Laika_Singleton
  * @implements SplSubject
  */
-class LAIKA_Exception_Handler extends LAIKA_Singleton implements SplSubject{
+class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
 
 //-------------------------------------------------------------------
 //	VARIABLES
 //-------------------------------------------------------------------
     /**
-    * instance of LAIKA_Exception_Handler
+    * instance of Laika_Exception_Handler
     * 
     * @var    object
     * @access protected

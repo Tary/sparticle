@@ -1,5 +1,26 @@
 <?php
-class LAIKA_Event_Handler extends LAIKA_Singleton implements SplSubject{
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Event_Handler.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ *	@date           2012-05-18 21:51:53 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Event_Handler class.
+ * 
+ * @extends Laika_Singleton
+ * @implements SplSubject
+ */
+class Laika_Event_Handler extends Laika_Singleton implements SplSubject{
 
 //-------------------------------------------------------------------
 //	PROPERTIES

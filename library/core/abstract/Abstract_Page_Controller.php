@@ -1,11 +1,26 @@
 <?php
 /**
- * Abstract LAIKA_Abstract_Page_Controller class.
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Abstract_Page_Controller.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       abstract
+ *	@date           2012-05-18 21:47:22 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Abstract Laika_Abstract_Page_Controller class.
  * 
  * @abstract
- * @extends LAIKA_Abstract_Controller
+ * @extends Laika_Abstract_Controller
  */
-abstract class LAIKA_Abstract_Page_Controller extends LAIKA_Abstract_Controller{
+abstract class Laika_Abstract_Page_Controller extends Laika_Abstract_Controller{
     
     const            CACHE_TIME    = 60;
     
@@ -36,7 +51,7 @@ abstract class LAIKA_Abstract_Page_Controller extends LAIKA_Abstract_Controller{
         endif;
 
         ob_end_flush();
-        LAIKA_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);
+        Laika_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);
 
         /*$html = ob_get_contents();
         $html = ob_get_clean();
@@ -65,7 +80,7 @@ abstract class LAIKA_Abstract_Page_Controller extends LAIKA_Abstract_Controller{
         $zip = true;
         $view  = str_replace('_Controller', '_Page', get_called_class());
         $class = get_called_class();
-        $url   = urlencode( str_replace(HTTP_ROOT, "File_".md5(LAIKA_User::active()->username), LAIKA_Router::init()->uri) );
+        $url   = urlencode( str_replace(HTTP_ROOT, "File_".md5(Laika_User::active()->username), Laika_Router::init()->uri) );
         //$cachefile = SYS_CACHE.basename($class, '.php') . '.cache';
         $cachefile = SYS_CACHE.$url.'.cache';
         clearstatcache();
@@ -74,7 +89,7 @@ abstract class LAIKA_Abstract_Page_Controller extends LAIKA_Abstract_Controller{
             if($zip)
                 echo gzuncompress(file_get_contents($cachefile));
             else include($cachefile);
-            LAIKA_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);
+            Laika_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);
             exit;
         }        
 
@@ -89,7 +104,7 @@ abstract class LAIKA_Abstract_Page_Controller extends LAIKA_Abstract_Controller{
         
         if($zip) echo gzuncompress(file_get_contents($cachefile));
         else include($cachefile);
-        LAIKA_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);        
+        Laika_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);        
     }
        
     /**

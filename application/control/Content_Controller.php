@@ -1,5 +1,25 @@
 <?php
-class FOLIO_Content_Controller extends LAIKA_Abstract_Page_Controller {
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Content_Controller.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     control
+ *	@category       control
+ *	@date           2012-05-18 21:27:08 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Sparticle_Content_Controller class.
+ * 
+ * @extends Laika_Abstract_Page_Controller
+ */
+class Sparticle_Content_Controller extends Laika_Abstract_Page_Controller {
 
 //-------------------------------------------------------------------
 //	PROPERTIES
@@ -19,11 +39,11 @@ class FOLIO_Content_Controller extends LAIKA_Abstract_Page_Controller {
 	public function default_action(){ $this->show(); }
 	
     public function __call($name,$arg){
-        $user = LAIKA_User::find('username',$name);
+        $user = Laika_User::find('username',$name);
         $id = $user->id();
         
         //$media = HTTP_ROOT."/media/".$name."/".$this->parameters['media'];        
-        //$media = FOLIO_Media::find('path',$media);
+        //$media = Sparticle_Media::find('path',$media);
         
         if(isset( $id ))
             $this->display(array("user"=>$id,"media"=>$media));
@@ -33,8 +53,8 @@ class FOLIO_Content_Controller extends LAIKA_Abstract_Page_Controller {
 
     public function show(){
         
-        $media = FOLIO_Media::find('id',$this->parameters['id']);
-        $user  = LAIKA_User::find('id',$media->user);
+        $media = Sparticle_Media::find('id',$this->parameters['id']);
+        $user  = Laika_User::find('id',$media->user);
         
         if(isset($this->parameters['id']) && !empty($this->parameters['id'])):
             $this->display(array("page"=>"content","media"=>$media,"user"=>$user));

@@ -1,10 +1,25 @@
 <?php
 /**
- * FOLIO_Login_Controller class.
- * 
- * @extends LAIKA_Login_Controller
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Login_Controller.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     control
+ *	@category       control
+ *	@date           2012-05-18 21:28:39 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
  */
-class FOLIO_Login_Controller extends LAIKA_Login_Controller{
+/**
+ * Sparticle_Login_Controller class.
+ * 
+ * @extends Laika_Login_Controller
+ */
+class Sparticle_Login_Controller extends Laika_Login_Controller{
 
     protected static $instance;
     protected        $parameters;

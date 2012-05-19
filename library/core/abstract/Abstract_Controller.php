@@ -5,9 +5,9 @@
  *	@filesource     Abstract_Controller.php
  *
  *	@version        0.1.0b
- *	@package        laika
- *	@subpackage     abstract
- *	@category       
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       abstract
  *	@date           2011-05-22 04:34:23 -0400 (Sun, 22 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
@@ -15,9 +15,9 @@
  *
  */
 /**
- * Abstract LAIKA_Abstract_Controller class.
+ * Abstract Laika_Abstract_Controller class.
  * 
  * @abstract
- * @extends LAIKA_Singleton
+ * @extends Laika_Singleton
  */
-abstract class LAIKA_Abstract_Controller extends LAIKA_Singleton{}
+abstract class Laika_Abstract_Controller extends Laika_Singleton{}

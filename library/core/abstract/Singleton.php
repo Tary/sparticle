@@ -5,9 +5,9 @@
  *	@filesource     Singleton.php
  *
  *	@version        0.1.0b
- *	@package        laika
- *	@subpackage     abstract
- *	@category       
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       abstract
  *	@date           2011-05-21 18:28:12 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
@@ -15,14 +15,14 @@
  *
  */
  /**
-  * Abstract LAIKA_Singleton class.
+  * Abstract Laika_Singleton class.
   * 
   * Base class for all objects employing the Singleton pattern.
   *
   * @abstract
   * @extends Laika
   */
- abstract class LAIKA_Singleton extends Laika{
+ abstract class Laika_Singleton extends Laika{
 
 //-------------------------------------------------------------------
 //	PROPERTIES

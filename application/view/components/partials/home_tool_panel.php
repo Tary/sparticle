@@ -3,7 +3,7 @@
     $fav = self::init()->get_fav();
 ?>
 
-<? if(LAIKA_Access::is_logged_in()): ?>
+<? if(Laika_Access::is_logged_in()): ?>
 <table>
 <tr class="webfont">
     <td><a href="javascript:;" 

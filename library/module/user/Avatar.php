@@ -1,5 +1,25 @@
 <?php
-class LAIKA_Avatar extends Laika {
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Avatar.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       util
+ *	@date           2012-05-18 22:02:27 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Avatar class.
+ * 
+ * @extends Laika
+ */
+class Laika_Avatar extends Laika {
 
 //-------------------------------------------------------------------
 //	VARIABLES
@@ -38,7 +58,7 @@ class LAIKA_Avatar extends Laika {
      */
     public static function get_gravatar( $email, $s, $d = '', $r = 'g', $img = true, $atts = array() ) {
     	
-    	$d = urlencode(LAIKA_Image::api_path('/images/missing.png', 'square', $s));
+    	$d = urlencode(Laika_Image::api_path('/images/missing.png', 'square', $s));
     	
     	$url = 'http://www.gravatar.com/avatar/';
     	$url .= md5( strtolower( trim( $email ) ) );

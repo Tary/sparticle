@@ -5,7 +5,7 @@
  *	@filesource     Database.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     core
  *	@category       database
  *	@date           2010-01-20 17:06:20 -0500 (Wed, 20 Jan 2010)
@@ -15,12 +15,13 @@
  *
  */
 /**
- * LAIKA_Database class.
+ * Laika_Database class.
  *
  * Main wrapper class to abstract database transactions.
- * 
+ *
+ * @extends Laika_Abstract_Socket_Service
  */
-class LAIKA_Database extends LAIKA_Abstract_Socket_Service{
+class Laika_Database extends Laika_Abstract_Socket_Service{
 
 //-------------------------------------------------------------------
 //	VARIABLES
@@ -43,9 +44,9 @@ class LAIKA_Database extends LAIKA_Abstract_Socket_Service{
     public static function init(){
 
         if( empty(self::$instance) )      
-            $index = LAIKA_Registry::get_record(__CLASS__);
+            $index = Laika_Registry::get_record(__CLASS__);
             if( isset($index) )                   
-                self::$instance = LAIKA_Registry::get_record(__CLASS__);
+                self::$instance = Laika_Registry::get_record(__CLASS__);
             else
                 parent::init(); 
         return self::$instance;    
@@ -72,14 +73,14 @@ class LAIKA_Database extends LAIKA_Abstract_Socket_Service{
     public function connect($driver){
 
         USE_PDO && extension_loaded('pdo') ? 
-            $this::$driver = LAIKA_NS.'Pdo_Driver' :
-            $this::$driver = LAIKA_NS.ucfirst($driver).'_Driver';
+            $this::$driver = NAME_SPACE.'Pdo_Driver' :
+            $this::$driver = NAME_SPACE.ucfirst($driver).'_Driver';
         try{ 
             $this->load_database_driver($this::$driver);
-            LAIKA_Registry::register(__CLASS__,$this);
+            Laika_Registry::register(__CLASS__,$this);
         }
-        catch(LAIKA_Exception $e){ 
-            throw new LAIKA_Exception('DATABASE_NO_CONNECT', 830); 
+        catch(Laika_Exception $e){ 
+            throw new Laika_Exception('DATABASE_NO_CONNECT', 830); 
         }
     }
     

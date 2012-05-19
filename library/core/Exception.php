@@ -5,7 +5,7 @@
  *	@filesource     Exception.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     core
  *	@category       
  *	@date           2011-05-22 08:50:24 -0400 (Sun, 22 May 2011)
@@ -15,8 +15,8 @@
  *
  */
 /**
- * LAIKA_Exception class.
+ * Laika_Exception class.
  * 
- * @extends LAIKA_Abstract_Exception
+ * @extends Laika_Abstract_Exception
  */
-class LAIKA_Exception extends LAIKA_Abstract_Exception{}
+class Laika_Exception extends Laika_Abstract_Exception{}

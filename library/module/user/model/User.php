@@ -1,12 +1,27 @@
 <?php
 /**
- * LAIKA_User class.
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     User.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     module
+ *	@category       model
+ *	@date           2012-05-18 22:05:59 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_User class.
  *
  * User class with methods coupling it with the Active User class
  * 
- * @extends LAIKA_Abstract_Model
+ * @extends Laika_Abstract_Model
  */
-class LAIKA_User extends LAIKA_Abstract_Model{
+class Laika_User extends Laika_Abstract_Model{
 
 //-------------------------------------------------------------------
 //	VARIABLES
@@ -47,9 +62,9 @@ class LAIKA_User extends LAIKA_Abstract_Model{
      */
     public static function bind(){
         if(func_num_args()>0)
-            LAIKA_Active_User::bind(func_get_arg(0));
+            Laika_Active_User::bind(func_get_arg(0));
         else
-            LAIKA_Active_User::bind($this->id);
+            Laika_Active_User::bind($this->id);
     }
 
     /**
@@ -62,7 +77,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
      * @return object
      */
     public static function active(){
-        return LAIKA_Active_User::active();            
+        return Laika_Active_User::active();            
     }
     
     /**
@@ -75,7 +90,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
      * @return object
      */
     public static function wake_up(){
-        return LAIKA_Active_User::wake_up();
+        return Laika_Active_User::wake_up();
     }
     
     /**
@@ -88,7 +103,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
      * @return void
      */
     public static function sleep(){
-        LAIKA_Active_User::sleep();   
+        Laika_Active_User::sleep();   
     }
     
     public static function deactivate(){}
@@ -105,7 +120,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
         if(func_num_args()==0)
             $user = $this;
         else
-            $user = LAIKA_User::load(func_get_arg(0));
+            $user = Laika_User::load(func_get_arg(0));
         return $user->firstname." ".$user->lastname;
     }
     
@@ -118,7 +133,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
      * @return void
      */
     public function valid_account(){
-        $account = LAIKA_Account::find('user',$this->id);
+        $account = Laika_Account::find('user',$this->id);
         if(!$account->confirmed() || $account->deactivated())
             return false;
         return true;
@@ -133,7 +148,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
      * @return void
      */
     public function account(){
-        return LAIKA_Account::find('user',$this->id);
+        return Laika_Account::find('user',$this->id);
     }
     
     /**
@@ -147,7 +162,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
         if(func_num_args()>0)          
             $this->dset('logged_in', func_get_arg(0));
             
-        elseif( LAIKA_Time::time_since($this->updated) > self::LOGOUT_TIME && $this->id != self::active()->id )
+        elseif( Laika_Time::time_since($this->updated) > self::LOGOUT_TIME && $this->id != self::active()->id )
             $this->dset('logged_in', false);            
         
         elseif( $this->id == self::active()->id )
@@ -165,7 +180,7 @@ class LAIKA_User extends LAIKA_Abstract_Model{
                 $attributes .= ' '.$key.'="'.$value.'"';
         
         $link = '<a href="'.HTTP_ROOT.'/user/'.$this->username.'"'.$attributes.' >';
-        return $link.LAIKA_Avatar::img($this->email,$size).'</a>';
+        return $link.Laika_Avatar::img($this->email,$size).'</a>';
     }
     
     public function link_to_user(){

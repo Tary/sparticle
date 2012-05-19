@@ -5,7 +5,7 @@
  *	@filesource     Error.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     core
  *	@category       error
  *	@date           2011-05-21 03:14:48 -0400 (Sat, 21 May 2011)
@@ -15,11 +15,11 @@
  *
  */
 /**
- * LAIKA_Error class
- *
+ * Laika_Error class.
  * 
+ * @extends Laika_Singleton
  */
-class LAIKA_Error extends LAIKA_Singleton{
+class Laika_Error extends Laika_Singleton{
 
 //-------------------------------------------------------------------
 //	VARIABLES

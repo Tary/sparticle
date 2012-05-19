@@ -5,7 +5,7 @@
  *	@filesource     Mysql.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     util
  *	@category       database
  *	@date           2011-05-21 03:53:51 -0400 (Sat, 21 May 2011)
@@ -15,13 +15,13 @@
  *
  */
 /**
- * LAIKA_Mysql class.
+ * Laika_Mysql class.
  *
  * Database wrapper object using mysqli
  *
  * Unimplemented.
  */
-class LAIKA_Mysql_Driver extends LAIKA_Singleton implements LAIKA_Interface_DB_Driver{
+class Laika_Mysql_Driver extends Laika_Singleton implements Laika_Interface_DB_Driver{
 
     protected static $instance;
     private   static $connection;

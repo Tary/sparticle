@@ -37,8 +37,8 @@
         <div id="back"><a href="javascript:;"><? echo BACK_ICON; ?></a></div>
         <table id="set-1" class="current_set">
             <tr>
-                <? //self::render_foreach('latest',FOLIO_Media::last($limit)); ?>
-                <? self::paginate('FOLIO_Media',$limit,array(0),'latest',array('DESC'=>'created')); ?>
+                <? //self::render_foreach('latest',Sparticle_Media::last($limit)); ?>
+                <? self::paginate('Sparticle_Media',$limit,array(0),'latest',array('DESC'=>'created')); ?>
             </tr>
         </table>
         <table id="set-2" class="next_set" >
@@ -50,7 +50,7 @@
     </div>
 </div>
 <? 
-//$collection = FOLIO_Media::collection(FOLIO_Media::find_with_offset_order_by(array(0),$offset,$limit,array('DESC'=>$limit)));
+//$collection = Sparticle_Media::collection(Sparticle_Media::find_with_offset_order_by(array(0),$offset,$limit,array('DESC'=>$limit)));
 //self::render_foreach('latest',$collection); 
 ?>
 

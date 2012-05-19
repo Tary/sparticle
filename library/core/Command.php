@@ -5,7 +5,7 @@
  *	@filesource 	Command.php
  *
  *	@version 	    0.1.0b
- *	@package 	    laika
+ *	@package 	    Laika
  *	@subpackage     core
  *	@category       control
  *	@date       	2010-01-18 22:21:21 -0500 (Mon, 18 Jan 2010)
@@ -14,13 +14,12 @@
  *	@copyright  	Copyright (c) 2010 Harvard University <{@link http://lab.dce.harvard.edu}>
  *
  */
-
- /**
- * LAIKA_Command class.
+/**
+ * Laika_Command class.
  * 
+ * @extends Laika
  */
-
-class LAIKA_Command extends Laika{
+class Laika_Command extends Laika{
 
 //-------------------------------------------------------------------
 //	VARIABLES
@@ -65,7 +64,7 @@ class LAIKA_Command extends Laika{
      * @return void
      */
     public function validate_command(){    
-      //$class = LAIKA_NS.ucfirst(strtolower(( $this->class_name )));
+      //$class = NAME_SPACE.ucfirst(strtolower(( $this->class_name )));
       $class = $this->get_class_name();
       method_exists($class, strtolower($this->method)) ? $exists = true : $exists = false;
       return $exists;
@@ -78,8 +77,8 @@ class LAIKA_Command extends Laika{
      * @return void
      */
     public function get_class_name(){ 
-        $class_name = LAIKA_Data::format_class_name($this->class_name);
-        return LAIKA_NS.$class_name; 
+        $class_name = Laika_Data::format_class_name($this->class_name);
+        return NAME_SPACE.$class_name; 
     }
     
     /**
@@ -105,9 +104,9 @@ class LAIKA_Command extends Laika{
      * @return void
      */
     public function setError( $error ){
-        throw new LAIKA_Exception('INVALID_COMMAND:['.$error.']',901);
+        throw new Laika_Exception('INVALID_COMMAND:['.$error.']',901);
                 
-        //Event::init()->reportError(new LAIKA_Error($error) );
+        //Event::init()->reportError(new Laika_Error($error) );
         
         //Event::init()->type('ERROR')->level('FATAL',$error);        
         //throw new Exception('Command Fault');

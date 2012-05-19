@@ -1,10 +1,25 @@
 <?php
 /**
- * LAIKA_Validation class.
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Validation.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     util
+ *	@category       data
+ *	@date           2012-05-18 22:11:15 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Validation class.
  * 
  * @extends Laika
  */
-class LAIKA_Validation extends Laika{
+class Laika_Validation extends Laika{
 
     /**
      * validate_form function.
@@ -28,8 +43,8 @@ class LAIKA_Validation extends Laika{
         endif;
         if(isset($custom))
             $result['custom'] = call_user_func($custom[0],$custom[1]);        
-        $errors = LAIKA_Data::recursive_array_filter($result);      
-        $v = new LAIKA_Validation_Responder($errors);
+        $errors = Laika_Data::recursive_array_filter($result);      
+        $v = new Laika_Validation_Responder($errors);
         return $v;   
     }
 
@@ -124,11 +139,11 @@ class LAIKA_Validation extends Laika{
 
 
 /**
- * LAIKA_Validation_Responder class.
+ * Laika_Validation_Responder class.
  * 
  * @extends Laika
  */
-class LAIKA_Validation_Responder extends Laika{
+class Laika_Validation_Responder extends Laika{
 
     private $passed;
     private $failed;

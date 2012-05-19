@@ -5,9 +5,9 @@
  *	@filesource     Interface_Exception.php
  *
  *	@version        0.1.0b
- *	@package        laika
- *	@subpackage     interface
- *	@category       
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       interface
  *	@date           2011-05-22 08:52:15 -0400 (Sun, 22 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
@@ -15,9 +15,11 @@
  *
  */
 /**
- * LAIKA_Interface_Exception interface.
+ * Laika_Interface_Exception interface.
+ * 
+ * @interface
  */
-interface LAIKA_Interface_Exception{
+interface Laika_Interface_Exception{
 
 //-------------------------------------------------------------------
 //	CONSTRUCTOR

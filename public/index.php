@@ -60,7 +60,7 @@
  *	@filesource     index.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     kernel
  *	@category       public
  *	@date           2010-01-19 08:19:52 -0500 (Tue, 19 Jan 2010)
@@ -73,4 +73,4 @@
  */ 
 
 require_once('../library/kernel/Engine.php');
-LAIKA_Engine::init()->execute( $_SERVER['REQUEST_URI'] );
+Laika_Engine::init()->execute( $_SERVER['REQUEST_URI'] );

@@ -1,11 +1,25 @@
 <?php
-
 /**
- * LAIKA_Registry class.
- * 
- * @extends LAIKA_Abstract_Registry
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Registry.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ *	@date           2012-05-18 21:55:18 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
  */
-class LAIKA_Registry extends LAIKA_Abstract_Registry{
+/**
+ * Laika_Registry class.
+ * 
+ * @extends Laika_Abstract_Registry
+ */
+class Laika_Registry extends Laika_Abstract_Registry{
 
 //-------------------------------------------------------------------
 //	VARIABLES

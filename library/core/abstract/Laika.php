@@ -1,13 +1,13 @@
 <?php
 /**
- *	LIGHTWEIGHT AUTOLOAD IMPLEMENTATION for KERNEL and APPLICATION
+ *  LAIKA SUPERCLASS
  *
  *	@filesource 	Laika.php
  *
  *	@version    	0.1.0b
- *	@package    	laika
- *	@subpackage 	abstract
- *	@category   	root
+ *	@package    	Laika
+ *	@subpackage 	core
+ *	@category   	superclass
  *	@date       	2010-01-18 02:29:45 -0500 (Mon, 18 Jan 2010)
  * 
  *	@author 	    Leonard M. Witzel <leonard_witzel@harvard.edu> 

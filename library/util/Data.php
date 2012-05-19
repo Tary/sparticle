@@ -5,9 +5,9 @@
  *	@filesource     Data.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     util
- *	@category       
+ *	@category       data
  *	@date           2011-05-21 03:54:15 -0400 (Sat, 21 May 2011)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
@@ -15,9 +15,9 @@
  *
  */
 /**
- * LAIKA_Data class.
+ * Laika_Data class.
  */
-class LAIKA_Data extends Laika{
+class Laika_Data extends Laika{
 
 //-------------------------------------------------------------------
 //	METHODS

@@ -1,5 +1,25 @@
 <?php
-class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Assets_Controller.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     control
+ *	@category       control
+ *	@date           2012-05-18 21:26:14 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Sparticle_Assets_Controller class.
+ * 
+ * @extends Laika_Abstract_Page_Controller
+ */
+class Sparticle_Assets_Controller extends Laika_Abstract_Page_Controller {
 
 //-------------------------------------------------------------------
 //	PROPERTIES
@@ -32,7 +52,7 @@ class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
         else
             $this->display(array(
                 "page"=>"assets",
-                "user"=>LAIKA_User::active()->id(),
+                "user"=>Laika_User::active()->id(),
                 "submenu"=>unserialize($this->submenu)
                 ));             
     }
@@ -76,11 +96,11 @@ class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
 
         foreach($data as $id => $array){
             /* @todo: sanitize input 
-            $array = LAIKA_Validation::sanitize_form($array) */
-            $media = FOLIO_Media::load($id);
+            $array = Laika_Validation::sanitize_form($array) */
+            $media = Sparticle_Media::load($id);
             foreach($array as $key => $value)
                 $media->$key($value);
-            FOLIO_Media::update($media);
+            Sparticle_Media::update($media);
         }
         $this->message('success','Selected files were successfully edited.');
     }
@@ -95,7 +115,7 @@ class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
     public function edit($data,$pagination){
         $this->display(array(
         "page"=>"assets",
-        "user"=>LAIKA_User::active()->id(),
+        "user"=>Laika_User::active()->id(),
         "component"=>'edit',
         "editables"=>$_POST,
         "pagination"=>$pagination,
@@ -112,10 +132,10 @@ class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
     public function delete($data,$pagination){
         
         foreach($data as $key => $id){
-            $media = FOLIO_Media::load($id);
+            $media = Sparticle_Media::load($id);
             $path  = str_replace(HTTP_ROOT, PUBLIC_DIRECTORY, $media::find('id',$id)->path);
             if(unlink($path))   
-                FOLIO_Media::delete($media);
+                Sparticle_Media::delete($media);
         }
         //$this->message('success','Selected files were successfully deleted.');
         self::redirect_to('/assets', array('p'=>$pagination,'alert'=>'delete') );    
@@ -132,7 +152,7 @@ class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
     public function message($type,$message){
         $this->display(array(
         "page"=>"assets",
-        "user"=>LAIKA_User::active()->id(),
+        "user"=>Laika_User::active()->id(),
         "alert"=>$message,
         "alert_type"=>$type,
         "submenu"=>unserialize($this->submenu)
@@ -143,7 +163,7 @@ class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
     public function organize(){
         $this->display(array(
         "page"=>"assets",
-        "user"=>LAIKA_User::active()->id(),
+        "user"=>Laika_User::active()->id(),
         "component"=>'organize',
         "submenu"=>unserialize($this->submenu)
         ));           
@@ -154,12 +174,12 @@ class FOLIO_Assets_Controller extends LAIKA_Abstract_Page_Controller {
     
     public function list_directory(){
 
-        $directory = MEDIA_DIRECTORY.'/'.LAIKA_User::active()->username();
+        $directory = MEDIA_DIRECTORY.'/'.Laika_User::active()->username();
         $iterator = new DirectoryIterator($directory);
         
         foreach($iterator as $file)
             if($file->isFile())
-                $images[] = HTTP_ROOT.'/media/'.LAIKA_User::active()->username().'/'.$file->getFilename();        
+                $images[] = HTTP_ROOT.'/media/'.Laika_User::active()->username().'/'.$file->getFilename();        
         return $images;
     }
 }

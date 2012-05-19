@@ -1,5 +1,25 @@
 <?php
-class FOLIO_Favorite_Controller extends LAIKA_Abstract_Page_Controller {
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Favorite_Controller.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     control
+ *	@category       control
+ *	@date           2012-05-18 21:27:35 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Sparticle_Favorite_Controller class.
+ * 
+ * @extends Laika_Abstract_Page_Controller
+ */
+class Sparticle_Favorite_Controller extends Laika_Abstract_Page_Controller {
 
 //-------------------------------------------------------------------
 //	PROPERTIES
@@ -25,7 +45,7 @@ class FOLIO_Favorite_Controller extends LAIKA_Abstract_Page_Controller {
      */
     public function favorite(){
         $id = $this->parameters['id'];
-        $success = FOLIO_Favorite::mark($id);
+        $success = Sparticle_Favorite::mark($id);
         echo json_encode($success);
     }
     
@@ -37,7 +57,7 @@ class FOLIO_Favorite_Controller extends LAIKA_Abstract_Page_Controller {
      */
     public function unfavorite(){        
         $id = $this->parameters['id'];        
-        $success = FOLIO_Favorite::undo(FOLIO_Favorite::find('item',$id));
+        $success = Sparticle_Favorite::undo(Sparticle_Favorite::find('item',$id));
         echo json_encode($success);
     }  
 }

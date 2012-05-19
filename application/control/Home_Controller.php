@@ -5,7 +5,7 @@
  *	@filesource     Home_Controller.php
  *
  *	@version        0.1.0b
- *	@package        FOLIO
+ *	@package        Sparticle
  *	@subpackage     control
  *	@category       control
  *	@date           2011-05-21 03:37:00 -0400 (Sat, 21 May 2011)
@@ -15,11 +15,11 @@
  *
  */
 /**
- * FOLIO_Home_Controller class.
+ * Sparticle_Home_Controller class.
  * 
- * @extends LAIKA_Abstract_Page_Controller
+ * @extends Laika_Abstract_Page_Controller
  */
-class FOLIO_Home_Controller extends LAIKA_Abstract_Page_Controller{
+class Sparticle_Home_Controller extends Laika_Abstract_Page_Controller{
 
     protected static $instance;
     protected        $parameters;
@@ -42,22 +42,22 @@ class FOLIO_Home_Controller extends LAIKA_Abstract_Page_Controller{
      * @return void
      */
     public function reload_image(){
-        $result = LAIKA_Database::query("SELECT * FROM medias WHERE privacy = true ORDER BY RAND() LIMIT 1","SINGLE");
+        $result = Laika_Database::query("SELECT * FROM medias WHERE privacy = true ORDER BY RAND() LIMIT 1","SINGLE");
         $path   = $result['path'];
-        $media  = FOLIO_Media::find('path',$path);
+        $media  = Sparticle_Media::find('path',$path);
         $id     = $media->id;
                 
         $name = $media->name;
-        $user = LAIKA_User::find('id',$media->user)->username;
+        $user = Laika_User::find('id',$media->user)->username;
 
-        $image  = LAIKA_Image::api_path( $path , 'auto', 500 );
-        $reflection = LAIKA_Image::api_path( $path, 'reflection', 500 );        
+        $image  = Laika_Image::api_path( $path , 'auto', 500 );
+        $reflection = Laika_Image::api_path( $path, 'reflection', 500 );        
         
         //$permalink = HTTP_ROOT."/content/$user?media=".$media->get_filename();        
         $permalink = HTTP_ROOT."/content?id={$media->id}";
         
-        if(LAIKA_Access::is_logged_in())
-            $check = FOLIO_Favorite::is_favorite( LAIKA_User::active()->id, $media->id, $media->type);
+        if(Laika_Access::is_logged_in())
+            $check = Sparticle_Favorite::is_favorite( Laika_User::active()->id, $media->id, $media->type);
         else 
             $check = false;
         ( $check )? $fav = "N" : $fav = "O";
@@ -71,7 +71,7 @@ class FOLIO_Home_Controller extends LAIKA_Abstract_Page_Controller{
                       "reflection"=>$reflection, 
                       "favorite"=>$fav, 
                       "id"=>$id,
-                      "path"=>LAIKA_Image::api_path( $path, 'constrain', '800x600' ),
+                      "path"=>Laika_Image::api_path( $path, 'constrain', '800x600' ),
                       "permalink"=>$permalink
                       ); 
         
@@ -86,7 +86,7 @@ class FOLIO_Home_Controller extends LAIKA_Abstract_Page_Controller{
      */
     public function favorite(){
         $id = $this->parameters['id'];
-        FOLIO_Favorite::mark($id);
+        Sparticle_Favorite::mark($id);
     }
     
     /**
@@ -97,15 +97,15 @@ class FOLIO_Home_Controller extends LAIKA_Abstract_Page_Controller{
      */
     public function unfavorite(){        
         $id = $this->parameters['id'];        
-        FOLIO_Favorite::undo(FOLIO_Favorite::find('item',$id));
+        Sparticle_Favorite::undo(Sparticle_Favorite::find('item',$id));
     }
     
     public function load_next(){
         $page  = $_SESSION['pagination']+1;
-        $total = FOLIO_Media::total_pages(5,array(0));
+        $total = Sparticle_Media::total_pages(5,array(0));
         if($total >= $page):            
             echo '<table id="set-'.$page.'" class="next_set" ><tr>';
-            FOLIO_Home_Page::init()->next_set(5);
+            Sparticle_Home_Page::init()->next_set(5);
             echo '</tr></table>';
         elseif($total < $page):
             $_SESSION['pagination'] = $total;
@@ -114,7 +114,7 @@ class FOLIO_Home_Controller extends LAIKA_Abstract_Page_Controller{
     
     public function page_set(){
         $page  = $this->parameters['page'];
-        $total = FOLIO_Media::total_pages(5,array(0));
+        $total = Sparticle_Media::total_pages(5,array(0));
         
         if($total < $page)            
             $_SESSION['pagination'] = $total;

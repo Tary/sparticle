@@ -5,7 +5,7 @@
  *	@filesource     Time.php
  *
  *	@version        0.1.0b
- *	@package        laika
+ *	@package        Laika
  *	@subpackage     util     
  *	@category       utility
  *	@date           2011-05-21 03:51:46 -0400 (Sat, 21 May 2011)
@@ -15,9 +15,9 @@
  *
  */
 /**
- * LAIKA_Time class.
+ * Laika_Time class.
  */
-class LAIKA_Time extends Laika{
+class Laika_Time extends Laika{
 
 //now(){}
 //database_datetime(){}

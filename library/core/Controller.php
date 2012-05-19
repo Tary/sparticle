@@ -5,7 +5,7 @@
  *	@filesource 	Controller.php
  *
  *	@version    	0.1.0b
- *	@package    	laika
+ *	@package    	Laika
  *	@subpackage 	core
  *	@category 	    control
  *	@date       	2010-01-18 03:02:34 -0500 (Mon, 18 Jan 2010)
@@ -15,9 +15,11 @@
  *
  */
 /**
- * LAIKA_Controller class.
+ * Laika_Controller class.
+ * 
+ * @extends Laika_Abstract_Controller
  */
-class LAIKA_Controller extends LAIKA_Abstract_Controller{
+class Laika_Controller extends Laika_Abstract_Controller{
 
 //-------------------------------------------------------------------
 //	VARIABLES
@@ -38,10 +40,10 @@ class LAIKA_Controller extends LAIKA_Abstract_Controller{
      * process function.
      * 
      * @access public
-     * @param  LAIKA_Command $Cmd
+     * @param  Laika_Command $Cmd
      * @return void
      */
-    public static function process( LAIKA_Command $Cmd ){
+    public static function process( Laika_Command $Cmd ){
         
         self::init();                
         if( $Cmd->validate_command() ){
@@ -50,13 +52,13 @@ class LAIKA_Controller extends LAIKA_Abstract_Controller{
             $method = $Cmd->get_method_name();
             $params = $Cmd->get_parameters();        
           
-            if( is_subclass_of($class,'LAIKA_Singleton') )
+            if( is_subclass_of($class,'Laika_Singleton') )
                 $class::init()->$method($params);
             else{
                 $object = new $class();
                 $object->$method($params);
             }
         }
-        else throw new LAIKA_Exception('INVALID_COMMAND', 901);        
+        else throw new Laika_Exception('INVALID_COMMAND', 901);        
     }  
 }

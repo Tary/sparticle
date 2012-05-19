@@ -1,10 +1,25 @@
 <?php
 /**
- * LAIKA_Interface_Model interface.
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Interface_Model.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       interface
+ *	@date           2012-05-18 21:20:17 -0400 (Fri, 18 May 2011)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Interface_Model interface.
  *
  * @interface
  */
-interface LAIKA_Interface_Model{
+interface Laika_Interface_Model{
 
     public function dset($property,$value);
     public function dget($property);

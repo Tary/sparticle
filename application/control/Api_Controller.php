@@ -1,5 +1,25 @@
 <?php
-class FOLIO_Api_Controller extends LAIKA_Abstract_Page_Controller {
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Api_Controller.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     control
+ *	@category       control
+ *	@date           2012-05-18 21:25:41 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Sparticle_Api_Controller class.
+ * 
+ * @extends Laika_Abstract_Page_Controller
+ */
+class Sparticle_Api_Controller extends Laika_Abstract_Page_Controller {
 
 //-------------------------------------------------------------------
 //	PROPERTIES
@@ -26,12 +46,12 @@ class FOLIO_Api_Controller extends LAIKA_Abstract_Page_Controller {
         $cache = SYS_CACHE.'img'.urlencode($pair).'.cache';
 
         if(file_exists($cache)):
-            $cached_image = new LAIKA_Image($cache);
+            $cached_image = new Laika_Image($cache);
             $cached_image->output();    
             
         else:
             $path = HTTP_ROOT.urldecode($this->parameters['src']);
-            $image = new LAIKA_Image($path);
+            $image = new Laika_Image($path);
             
             /* WIDTH: */
             if(isset($this->parameters['w'])):
@@ -74,7 +94,7 @@ class FOLIO_Api_Controller extends LAIKA_Abstract_Page_Controller {
     }
     
     public function avatar(){
-        $user = LAIKA_User::find('id',$this->parameters['user']);
+        $user = Laika_User::find('id',$this->parameters['user']);
         if(isset($this->parameters['size']))
             $size = $this->parameters['size'];
         else

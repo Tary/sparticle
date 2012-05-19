@@ -9,9 +9,9 @@
  *
  *	@filesource 	conf.php
  *	@version    	0.1.0b
- *	@package    	laika
- *	@subpackage     kernel
- *	@category       config file
+ *	@package    	Laika
+ *	@subpackage     config
+ *	@category       config
  *	@date       	010-01-18 01:59:19 -0500 (Mon, 18 Jan 2010)
  *	@author     	Leonard M. Witzel <witzel@post.harvard.edu>
  *
@@ -52,7 +52,7 @@
 //-------------------------------------------------------------------
 
     define( 'APPLICATION_TITLE',     'Sparticle *'      );
-    define( 'CODE_NAME',             'FOLIO'            ); // Application Namespace Tag
+    define( 'CODE_NAME',             'Sparticle'        ); // Application Namespace Tag
     define( 'TIME_ZONE',             'America/New_York' );
     define( 'MAX_FILE_SIZE',         1073741824         ); //1G in Bytes: Set php.ini appropriately    
     

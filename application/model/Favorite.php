@@ -1,5 +1,25 @@
 <?php
-class FOLIO_Favorite extends LAIKA_Abstract_Singleton_Model{
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Favorite.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     model
+ *	@category       model
+ *	@date           2012-05-18 21:36:52 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Sparticle_Favorite class.
+ * 
+ * @extends Laika_Abstract_Singleton_Model
+ */
+class Sparticle_Favorite extends Laika_Abstract_Singleton_Model{
 
 //-------------------------------------------------------------------
 //	PROPERTIES
@@ -23,23 +43,23 @@ class FOLIO_Favorite extends LAIKA_Abstract_Singleton_Model{
 
     public static function mark($item,$type="media"){
         
-        if(!LAIKA_Access::is_logged_in()) return array('login'=>false);
+        if(!Laika_Access::is_logged_in()) return array('login'=>false);
         
         $favorite = self::init();
-        $favorite->user = LAIKA_User::active()->id;
+        $favorite->user = Laika_User::active()->id;
         $favorite->item = $item;
         $favorite->type = $type;        
         
         if($favorite->is_favorite($favorite->user,$item,$type))
             return array('favorited'=>false,'login'=>true);
         
-        LAIKA_Database::add($favorite);
+        Laika_Database::add($favorite);
         return array('favorited'=>true,'login'=>true);  
     }
 
     public static function undo($object){
         
-        if(!LAIKA_Access::is_logged_in()) 
+        if(!Laika_Access::is_logged_in()) 
             return array('login'=>false);
         
         parent::delete($object);
@@ -47,7 +67,7 @@ class FOLIO_Favorite extends LAIKA_Abstract_Singleton_Model{
     }
     
     public function is_favorite($user,$item,$type){
-        $result = LAIKA_Database::query("SELECT item FROM favorites WHERE user = $user AND item = $item",'SINGLE');
+        $result = Laika_Database::query("SELECT item FROM favorites WHERE user = $user AND item = $item",'SINGLE');
         if(!isset($result) || empty($result))
             return false;
         return true;

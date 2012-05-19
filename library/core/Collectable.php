@@ -1,5 +1,25 @@
 <?php
-class LAIKA_Collectable extends Laika{
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Collectable.php
+ *
+ *	@version        0.1.0b
+ *	@package        Laika
+ *	@subpackage     core
+ *	@category       
+ *	@date           2012-05-18 21:53:52 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Laika_Collectable class.
+ * 
+ * @extends Laika
+ */
+class Laika_Collectable extends Laika{
 
     /**
      * __construct function.
@@ -10,7 +30,7 @@ class LAIKA_Collectable extends Laika{
      * @return void
      */
     public function __construct($object){
-        if(is_subclass_of($object,'LAIKA_Singleton')):
+        if(is_subclass_of($object,'Laika_Singleton')):
             $array = $object->to_array();
         elseif(is_subclass_of($object,'Laika')):
             //$array = $object::reflect()->getProperties();
@@ -35,7 +55,7 @@ class LAIKA_Collectable extends Laika{
         $object = $this->revive();
         if(is_subclass_of($object,'Laika'))
             return $object->$key;
-        else throw new LAIKA_Exception('INVALID_DATA_TYPE',800);
+        else throw new Laika_Exception('INVALID_DATA_TYPE',800);
     }
     
     /**
@@ -73,7 +93,7 @@ class LAIKA_Collectable extends Laika{
      */
     public function revive(){
         $class = $this->object_type;
-        is_subclass_of($class,'LAIKA_Singleton') ? $object = $class::init() : $object = new $class();
+        is_subclass_of($class,'Laika_Singleton') ? $object = $class::init() : $object = new $class();
         $vars = get_object_vars($this);
         foreach($vars as $key => $value) 
             if($key!='object_type')

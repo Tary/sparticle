@@ -1,5 +1,25 @@
 <?php
-class FOLIO_Comment extends LAIKA_Abstract_Model{
+/**
+ *	LAIKA FRAMEWORK Release Notes:
+ *
+ *	@filesource     Comment.php
+ *
+ *	@version        0.1.0b
+ *	@package        Sparticle
+ *	@subpackage     model
+ *	@category       model
+ *	@date           2012-05-18 21:09:42 -0400 (Fri, 18 May 2012)
+ *
+ *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
+ *	@copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *
+ */
+/**
+ * Sparticle_Comment class.
+ * 
+ * @extends Laika_Abstract_Model
+ */
+class Sparticle_Comment extends Laika_Abstract_Model{
 
 //-------------------------------------------------------------------
 //	PROPERTIES
@@ -21,8 +41,8 @@ class FOLIO_Comment extends LAIKA_Abstract_Model{
 //-------------------------------------------------------------------
 
     public function is_owner(){
-        if(LAIKA_Access::is_logged_in())
-            if($this->user == LAIKA_User::active()->id)
+        if(Laika_Access::is_logged_in())
+            if($this->user == Laika_User::active()->id)
                 return true;
         return false;
     }

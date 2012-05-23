@@ -167,11 +167,19 @@ ul li .dropdown-menu{
    color:#336699;
    text-shadow:0 -1px #000, 0px 1px #83c0ff;
 }
+.controls.dark .entypo{
+/*     position: absolute; */
+/*
+    left:6px;
+    top:-16px;
+*/
+    font-size: 4em;
+}
 .controls.dark .entypo:active{
    color:#336699;
    text-shadow:0 -1px #000, 0px 1px #83c0ff;
     position: absolute;
-    top:-16px;
+/*     top:-16px; */
     left:-14px;       
 }
 

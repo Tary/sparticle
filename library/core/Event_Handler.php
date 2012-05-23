@@ -8,11 +8,13 @@
  *  @date           2012-05-18 21:51:53 -0400 (Fri, 18 May 2012)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2012  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
- * Laika_Event_Handler class.
+ *  Laika_Event_Handler class.
+ *  
+ *  The framework event handler class.
  *
  *  @package        Laika
  *  @subpackage     core

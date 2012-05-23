@@ -11,12 +11,14 @@
  *  @date          2012-05-18 21:48:04 -0400 (Fri, 18 May 2012)
  *
  *  @author        Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright     Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright     Copyright (c) 2012  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
- * Abstract Laika_Abstract_Page class.
- *
+ *  Abstract Laika_Abstract_Page class.
+ * 
+ *  Abstract class for Application level logic classes for Views
+ * 
  *  @package        Laika
  *  @subpackage     core
  *

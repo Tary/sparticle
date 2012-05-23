@@ -8,11 +8,13 @@
  *  @date           2012-05-18 21:48:53 -0400 (Fri, 18 May 2012)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2012  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
- * Abstract Laika_Abstract_Socket_Service class.
+ *  Abstract Laika_Abstract_Socket_Service class.
+ *  
+ *  Abstract class for services. 
  *
  *  @package        Laika
  *  @subpackage     core

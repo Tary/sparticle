@@ -13,6 +13,8 @@
  */
 /**
  *  Laika_Controller class.
+ *
+ *  The main framework controller
  * 
  *  @package        Laika
  *  @subpackage     core

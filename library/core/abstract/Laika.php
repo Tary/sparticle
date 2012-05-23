@@ -12,10 +12,11 @@
  *
  */
 /**
- * Laika class.
- *
+ *  Laika class.
+ *  
  *  Framework Superclass 
- *
+ *  Most Laika classes inherit from this base class.
+ *  
  *  @package        Laika
  *  @subpackage     core
  *  @category       superclass

@@ -14,6 +14,9 @@
 /**
  *  Laika_Router class.
  * 
+ *  The router class is responsible for turning commands from the
+ *  main controller into an application layer execution path. 
+ *
  *  @package        Laika
  *  @subpackage     core
  *  @category       

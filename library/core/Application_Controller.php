@@ -12,7 +12,9 @@
  *
  */
 /**
- * Laika_Application_Controller class.
+ *  Laika_Application_Controller class.
+ *  
+ *  Controller that communcates requests to the Application layer
  * 
  *  @package        Laika
  *  @subpackage     core

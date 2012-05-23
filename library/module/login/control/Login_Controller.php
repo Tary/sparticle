@@ -8,14 +8,14 @@
  *  @date           2012-05-18 22:01:04 -0400 (Fri, 18 May 2012)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2012  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Laika_Login_Controller class.
  * 
  *  Controller for the login module.
- *
+ *  
  *  @package        Laika
  *  @subpackage     module
  *  @category       control

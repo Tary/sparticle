@@ -12,8 +12,11 @@
  *
  */
 /**
- * Laika_Command class.
+ *  Laika_Command class.
  * 
+ *  Framework level class for wrapping the initiatial request 
+ *  into a command that can be passed to the application layer
+ *
  *  @package        Laika
  *  @subpackage     core
  *  @category       control

@@ -15,7 +15,7 @@
  *  Laika_Bootstrap class.
  * 
  *  System Boot Loader
- *
+ *  
  *  @package        Laika
  *  @subpackage     kernel
  *  @category       boot

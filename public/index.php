@@ -42,7 +42,7 @@
  *	and the following disclaimer in the documentation and/or other materials 
  *	provided with the distribution.
  *	
- *	Neither the name of LaikaSoft nor the names of its contributors may be used to endorse 
+ *	Neither the name of Laikasoft nor the names of its contributors may be used to endorse 
  *	or promote products derived from this software without specific prior written permission.
  *	
  *	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
@@ -66,7 +66,7 @@
  *	@date           2010-01-19 08:19:52 -0500 (Tue, 19 Jan 2010)
  *
  *	@author         Leonard M. Witzel <witzel@post.harvard.edu>
- *	@copyright      Copyright (c) 2010  LaikaSoft <{@link http://platypo.us }>
+ *	@copyright      Copyright (c) 2010  Laikasoft <{@link http://platypo.us }>
  *
  *  @license http://opensource.org/licenses/bsd-license.php BSD License 
  *

@@ -11,14 +11,17 @@
  *  @date           2012-05-18 21:47:22 -0400 (Fri, 18 May 2012)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2012  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Abstract Laika_Abstract_Page_Controller class.
  *
+ *  Abstract class for Controllers that handle the Application level requests
+ *  
  *  @package        Laika
  *  @subpackage     core
+ *  @category       abstract
  *
  *  @abstract
  *  @extends        Laika_Abstract_Controller

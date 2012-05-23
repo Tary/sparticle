@@ -8,11 +8,13 @@
  *  @date           2011-05-21 18:28:12 -0400 (Sat, 21 May 2011)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2011  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
- * Abstract Laika_Abstract_Registry class.
+ *  Abstract Laika_Abstract_Registry class.
+ *  
+ *  Abstarct class for registry patter classes.
  *
  *  @package        Laika
  *  @subpackage     core

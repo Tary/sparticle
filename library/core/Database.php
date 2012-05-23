@@ -15,7 +15,7 @@
  *  Laika_Database class.
  *
  *  Main wrapper class to abstract database transactions.
- *
+ *  
  *  @package        Laika
  *  @subpackage     core
  *  @category       database

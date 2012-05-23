@@ -8,7 +8,7 @@
  *  @date           2011-05-21 03:53:51 -0400 (Sat, 21 May 2011)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2011  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
@@ -17,7 +17,7 @@
  *  Database wrapper object using mysqli
  * 
  *  Unimplemented.
- *
+ *  
  *  @package        Laika
  *  @subpackage     util
  *  @category       database

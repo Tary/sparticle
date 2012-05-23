@@ -8,7 +8,7 @@
  *  @date           2011-06-08 00:17:06 -0400 (Wed, 8 Jun 2011)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2011  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**

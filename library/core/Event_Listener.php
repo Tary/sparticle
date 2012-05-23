@@ -8,15 +8,17 @@
  *  @date           2011-05-21 03:15:10 -0400 (Sat, 21 May 2011)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2011  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Laika_Event_Listener class.
+ *  
+ *  The framework event listener class
  *
  *  @package        Laika
  *  @subpackage     core
- *  @category       
+ *  @category       events
  * 
  *  @extends Laika_Singleton
  *  @implements SPLObserver

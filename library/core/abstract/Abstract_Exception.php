@@ -8,12 +8,14 @@
  *  @date           2011-05-22 08:50:52 -0400 (Sun, 22 May 2011)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2011  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Abstract Laika_Abstract_Exception class.
- *
+ * 
+ *  Abstract parent class for Exception objects.
+ * 
  *  @package        Laika
  *  @subpackage     core
  *  @category       abstract

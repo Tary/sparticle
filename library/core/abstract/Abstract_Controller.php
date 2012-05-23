@@ -8,11 +8,13 @@
  *  @date           2011-05-22 04:34:23 -0400 (Sun, 22 May 2011)
  *  
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2011  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2011  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Abstract Laika_Abstract_Controller class.
+ *  
+ *  Abstract class for all controllers.
  *
  *  @package        Laika
  *  @subpackage     core

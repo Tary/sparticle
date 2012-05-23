@@ -8,12 +8,14 @@
  *  @date           2012-05-18 21:18:58 -0400 (Fri, 18 May 2011)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2012  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /** 
  *  Laika_Interface_DB_Driver interface.
  *
+ *  Interface for Database drivers.
+ *  
  *  @package        Laika
  *  @subpackage     core
  *  @category       interface

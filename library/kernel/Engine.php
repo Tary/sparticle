@@ -15,7 +15,7 @@
  *  LaikaEngine class.
  * 
  *  Framework Engine
- *
+ *  
  *  @package        Laika
  *  @subpackage     kernel
  *  @category       engine

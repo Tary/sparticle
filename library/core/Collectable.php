@@ -8,12 +8,14 @@
  *  @date           2012-05-18 21:53:52 -0400 (Fri, 18 May 2012)
  *
  *  @author         Leonard M. Witzel <witzel@post.harvard.edu>
- *  @copyright      Copyright (c) 2012  Laika Soft <{@link http://oafbot.com}>
+ *  @copyright      Copyright (c) 2012  Laikasoft <{@link http://oafbot.com}>
  *
  */
 /**
  *  Laika_Collectable class.
  * 
+ *  Normalized Object abstraction class for object collections.
+ *
  *  @package        Laika
  *  @subpackage     core
  *  @category       

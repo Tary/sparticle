@@ -5,6 +5,7 @@ $avatar = Laika_Avatar::img($user->email(),120);
 self::init()->counter = 0;
 ?>
 <? self::add_style('user'); ?>
+<? self::scripts('user'); ?>
 <div id="container">
     <article id="page-content">
         <? echo $avatar; ?>

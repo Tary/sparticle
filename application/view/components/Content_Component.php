@@ -7,7 +7,7 @@
    $favorited   = Sparticle_Favorite::init()->is_favorite($active_user, $media->id, $media->type);
 ?>
 
-<div id="container"> 
+<div id="container">
     <div class="controls dark upper">
         <div class="toolbar right">
             <table>
@@ -19,7 +19,7 @@
                     </a>
                 </td>
                 <td class="icon">
-                    <a href="javascript:;" onclick="enterFullScreen('<? self::init()->fullscreen(); ?>');clickFlash(this);">
+                    <a href="javascript:;" onclick="enterFullScreen('<? self::init()->fullscreen(); ?>');">
                         <? echo FULLSCREEN_ICON; ?>
                     </a>
                 </td>

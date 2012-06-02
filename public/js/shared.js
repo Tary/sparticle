@@ -31,7 +31,7 @@ function close_alert(){
 }
 
 function loading(){
-    $('.loader').fadeIn(1000);
+    $('.loader').fadeIn(100);
     $('.loader').text(counter);
     counter++;
     if(counter == 7)
@@ -44,6 +44,9 @@ function endload(){
 }
 
 function fullscreen(src){
+    counter = 0;
+    timer   = setInterval(loading,80);
+    
     var page_width = pageWidth();
     var page_height = pageHeight();
     
@@ -56,24 +59,31 @@ function fullscreen(src){
         
     var logo = '<div id="logo_absolute"><img src="'+root_url+'/images/logo_white.svg" type="image/svg+xml" id="logo"/><h2 class=pacifico>Sparticle *</h2> <h3>press any key to exit</h3></div>';
 
-    var html = logo+'<div id=fullscreen onclick="exit_fullscreen()"><table height="100%" width="100%"><tbody><tr><td align="center" valign="middle"><img src="'+src+'" id=fullscreen_content /></td></tr></tbody></table></div>';
-
-/*<a href="javascript:goto_image(\''+src+'\');" title="view orignal">*/
-
+    var html = logo+'<div id=fullscreen onclick="exit_fullscreen()"></div>';
+    
+    var loader = '<div class="webfont loader" id="loader" style="opacity:1.0;">0</div>';
+    
+    content = '<table height="100%" width="100%"><tbody><tr><td align="center" valign="middle">'+loader+'<img src="'+src+'" id=fullscreen_content style="display:none;"/></td></tr></tbody></table>';
+        
     $('#main').before(html);
     $('#footer').hide();
     $('#logo_absolute').fadeIn(1000);
-    $('#fullscreen_content').load( function(){
-        $('#fullscreen').fadeIn(1000, function(){
-            $('#main').hide();
+    $('#fullscreen').append(content);   
+    $('#fullscreen').fadeIn(1000, function(){
+        $('#main').hide();
+            $('#fullscreen_content').load( function(){        
+            $('#fullscreen_content').fadeIn(1000);
+            $('#loader').remove();
+            endload();                
         });
-    });
-    //document.documentElement.style.overflow = 'hidden';
-    //document.body.scroll = "no";
-    document.onkeypress = function(){
-        exit_fullscreen();
-    }        
+
+        document.onkeypress = function(){
+            exit_fullscreen();
+        }
+    });        
 }
+
+
 
 function goto_image(source){
 /*
@@ -85,7 +95,7 @@ function goto_image(source){
 }
 
 function enterFullScreen(src){        
-    var t=setTimeout("fullscreen('"+src+"')",1000);    
+    var t=setTimeout("fullscreen('"+src+"')",100);    
 }
 
 function exit_fullscreen(){

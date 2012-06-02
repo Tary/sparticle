@@ -127,7 +127,34 @@ function unhilite(element){
 function goFullScreen(src){    
     clickFlash('#fullscr_icon');    
     //enterFullScreen();
-    var t=setTimeout("fullscreen('"+src+"')",1000);
+    //var t=setTimeout("flscreen('"+src+"')",1000);
+    
+    var page_width = pageWidth();
+    var page_height = pageHeight();
+    
+    if(page_width > 800){            
+        var width  = page_width  - 100;
+        var height = page_height - 100;
+        src = src.replace('c=800x600','op='+width+'x'+height);
+        src += '&nocache=true'; 
+    }
+        
+    var logo = '<div id="logo_absolute"><img src="'+root_url+'/images/logo_white.svg" type="image/svg+xml" id="logo"/><h2 class=pacifico>Sparticle *</h2> <h3>press any key to exit</h3></div>';
+
+    var html = logo+'<div id=fullscreen onclick="exit_fullscreen()"><table height="100%" width="100%"><tbody><tr><td align="center" valign="middle"><img src="'+src+'" id=fullscreen_content /></td></tr></tbody></table></div>';
+
+    $('#main').before(html);
+    $('#footer').hide();
+    $('#logo_absolute').fadeIn(1000);
+    
+    $('#fullscreen_content').load( function(){
+        $('#fullscreen').fadeIn(1000, function(){
+            $('#main').hide();
+        });
+    });
+    document.onkeypress = function(){
+        exit_fullscreen();
+    }    
 }
 
 function switch_thumbs(set,dir){

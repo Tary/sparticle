@@ -2,6 +2,7 @@
 $id   = self::init()->user;
 $user = Laika_User::load($id);
 $avatar = Laika_Avatar::img($user->email(),120);
+self::init()->counter = 0;
 ?>
 <? self::add_style('user'); ?>
 <div id="container">
@@ -23,20 +24,20 @@ $avatar = Laika_Avatar::img($user->email(),120);
     </artice>
     <br />
 </div>
-<div id="container">
-    <?php 
-/*
-        $last = Sparticle_Media::last(1,array('user'=>$id));    
-        if( isset($last) )
-            echo '<img src="'.Laika_Image::api_path($last->path, 'auto', 500 ).'" />';
-*/
-    ?>
-    
-    <p>    
-    <? //if( isset($collection) ): ?>
-        <? //$collection->shift(); ?>
-        <? //self::render_foreach('user_content',$collection); ?>
-        <? self::paginate('Sparticle_Media',8,array('user'=>$id),'user_content',array('DESC'=>'created')); ?>
-    <? //endif; ?>
-    </p> 
+<div id="ui-container">
+    <div class="controls light upper">
+        <div class="toolbar center light">
+            Content Stream
+        </div>
+        <div id="pagination" class="toolbar right light">
+        <? Sparticle_Media::render_pagination(9,array('user'=>$id),"user/{$user->username}"); ?>
+        
+        
+        </div>
+    </div>
+    <table id="contact-sheet">     
+        <? self::paginate('Sparticle_Media', 9, array('user'=>$id),'user_content', array('DESC'=>'created')); ?>
+    </table>
+    <div class="controls light lower">
+    </div>
 </div>

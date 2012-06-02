@@ -176,6 +176,19 @@ header h1{
     overflow:hidden;
     position:relative;
 }
+
+#ui-container{
+    width:900px;
+    padding:0px;
+	margin: 20px auto 40px auto;
+	overflow: hidden;    
+    position: relative;
+    
+    border-radius:5px;
+    border:#444 1px solid;
+    background-color: #666;
+}
+
 			
 /* ~~~~~~~~~ article ~~~~~~~~~~ */
 

@@ -45,7 +45,7 @@ class Laika_Uploader extends Laika_Singleton {
      */
     public function upload($F){
         
-        $target = Laika_ROOT.'/tmp/uploads/'.basename($F['name']); 
+        $target = LAIKA_ROOT.'/tmp/uploads/'.basename($F['name']); 
         $error  = 0; 
      
         if($F['size'] > MAX_FILE_SIZE) 

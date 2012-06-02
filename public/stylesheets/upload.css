@@ -1,7 +1,5 @@
-#container{
-    padding:0px;
-    background:#eee;
-    width:900px;      
+#ui-container{
+    background:#ccc;
 }
 
 .upload_image{

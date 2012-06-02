@@ -1,5 +1,5 @@
 <? $user = self::init()->user; ?>
-<div id="container">
+<div id="ui-container" class="gradient">
     <form method=post action="<? self::path_to('/assets/action?p='.$_SESSION['pagination']); ?>" id="assets">
         <div class="controls dark upper" >
             <div class="toolbar left">

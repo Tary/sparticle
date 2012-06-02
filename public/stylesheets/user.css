@@ -43,11 +43,25 @@
     vertical-align:top;
 }
 
-.small_image{
-    margin:20px;
-    margin-left:0px;
+#contact-sheet{
+    width:840px;
+    margin:30px;
+    
+}
+
+#contact-sheet td{
+    margin:auto;
+    height:250px;
+    width:250px;    
     vertical-align:top;
+    text-align: center;
+    padding-bottom:80px;
+}
+
+.thumb{
+    margin:15px;
     border-radius: 2px;
+    box-shadow: 3px 3px 5px #444;
 }
 
 .user{}

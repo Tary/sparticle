@@ -31,11 +31,17 @@ class Sparticle_User_Controller extends Laika_User_Controller{
     
 
     public function default_action(){
+        
+        if(!isset($this->parameters['p']))
+            $_SESSION['pagination'] = 1;
+        else
+            $_SESSION['pagination'] = $this->parameters['p'];
+        
         $this->display(array(
         "page"=>Laika_User::active()->username(),
         "user"=>Laika_User::active()->id(),
         "submenu"=>unserialize($this->submenu)
-        ));                 
+        ));                         
     }    
     
     public function gallery(){}
@@ -59,6 +65,11 @@ class Sparticle_User_Controller extends Laika_User_Controller{
      * @return void
      */
     public function __call($name,$arg){
+        if(!isset($this->parameters['p']))
+            $_SESSION['pagination'] = 1;
+        else
+            $_SESSION['pagination'] = $this->parameters['p'];
+        
         $user = Laika_User::find('username',$name);
         $id = $user->id();
         if(isset( $id ))

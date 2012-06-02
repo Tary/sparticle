@@ -102,7 +102,7 @@
     define ("USER_MENU", serialize( 
         array('Home'   => '/user/',
               'Users'  => '/user/directory',
-              'Media'  => '/assets',
+              'Edit'  => '/assets',
               'Upload' => '/upload' )));
               
     

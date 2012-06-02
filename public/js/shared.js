@@ -68,10 +68,12 @@ function fullscreen(src){
     $('#main').before(html);
     $('#footer').hide();
     $('#logo_absolute').fadeIn(1000);
-    $('#fullscreen').append(content);   
     $('#fullscreen').fadeIn(1000, function(){
+        
         $('#main').hide();
-            $('#fullscreen_content').load( function(){        
+        $('#fullscreen').append(content);
+        
+        $('#fullscreen_content').load( function(){        
             $('#fullscreen_content').fadeIn(1000);
             $('#loader').remove();
             endload();                

@@ -6,9 +6,16 @@ Requirements:
 #### The Usual Suspects ####
 
 ####[ PHP 5.3+ ]( http://php.net/       )
-####[ Apache   ]( http://apache.org/    )
-####[ MySQL    ]( http://www.mysql.com/ )
+PHP 5.3 is a minimum requirement.
 
+####[ Apache   ]( http://apache.org/    )
+I guess it could run on any http server that can accomodate for PHP.
+
+####[ MySQL    ]( http://www.mysql.com/ ) 
+Technically speaking, the database does not have to be MySQL.
+In theory, the framework could work with any SQL-like database that is supported by the PHP PDO wrapper class.
+However, it just happens that I have only tested the code against MySQL. 
+Additionally, other drivers can be written for the database engine as a plugin, as the Laika database layer is a wrapper class.
 
 
 System Configuration:

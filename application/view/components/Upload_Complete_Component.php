@@ -1,6 +1,6 @@
 
 <div id="ui-container">
-<div class="controls light upper">
+<div class="controls lite upper">
     <? self::link_to("Manage","/assets/",array("class"=>"button gray medium","id"=>"upload_more")); ?>
 </div>
 <p>The following files were uploaded.</p>  
@@ -11,7 +11,7 @@
        echo '<a href='.HTTP_ROOT.'/media/'.Laika_User::active()->username.'/'.$value.' >
              <img src='.HTTP_ROOT.'/media/'.Laika_User::active()->username.'/'.$value.' class="upload_image" /></a>';?>
 </p>
-<div class="controls light lower">
+<div class="controls lite lower">
 <? self::link_to("Upload more files...","/upload/",array("class"=>"button blue medium bigrounded","id"=>"upload_more")); ?>
 </div>
 </div>

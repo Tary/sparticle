@@ -26,7 +26,9 @@
         </div>
     </form> 
     <div class="controls dark lower">
-        <? Sparticle_Media::render_pagination(8,array('user'=>$user),'assets'); ?>
+        <div class="toolbar left">
+            <? Sparticle_Media::render_pagination(8,array('user'=>$user),'assets'); ?>
+        </div>
     </div>
 </div>
 <div id="pop-up" title="Delete Media?" style="display:none;">

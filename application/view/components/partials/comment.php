@@ -3,9 +3,8 @@
 <div id="comment_module">
     <div class="controls dark upper">
         <h1 id="comment_header"><? echo COMMENT_ICON; ?>&nbsp; Comments :</h1>
-        <div id="pagination">
-        
-        <? Sparticle_Comment::render_ajax_pagination(10,$parameters,'comment'); ?>
+        <div id="pagination" class="toolbar">
+            <? Sparticle_Comment::render_ajax_pagination(10,$parameters,'comment'); ?>
         </div>   
     </div>
 

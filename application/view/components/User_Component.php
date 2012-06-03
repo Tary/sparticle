@@ -26,19 +26,20 @@ self::init()->counter = 0;
     <br />
 </div>
 <div id="ui-container">
-    <div class="controls light upper">
-        <div class="toolbar center light">
+    <div class="controls lite upper">
+        <div class="toolbar center lite">
             Content Stream
         </div>
-        <div id="pagination" class="toolbar right light">
-        <? Sparticle_Media::render_pagination(9,array('user'=>$id),"user/{$user->username}"); ?>
-        
-        
+        <div id="pagination" class="toolbar right lite">
+            <? Sparticle_Media::render_pagination(9,array('user'=>$id),"user/{$user->username}"); ?>    
         </div>
     </div>
     <table id="contact-sheet">     
         <? self::paginate('Sparticle_Media', 9, array('user'=>$id),'user_content', array('DESC'=>'created')); ?>
     </table>
-    <div class="controls light lower">
+    <div class="controls lite lower">
+        <div class="toolbar right lite">
+            <? Sparticle_Media::render_pagination(9,array('user'=>$id),"user/{$user->username}"); ?>    
+        </div>
     </div>
 </div>

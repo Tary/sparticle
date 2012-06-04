@@ -46,7 +46,8 @@
 #contact-sheet{
     width:840px;
     margin:30px;
-    
+    color:#999;
+    font-size:smaller;
 }
 
 #contact-sheet td{
@@ -54,10 +55,18 @@
     height:250px;
     width:250px;    
     vertical-align:top;
-    text-align: center;
+/*     text-align: center; */
     padding-bottom:80px;
 }
+.info h3{
+    font-size:small;
+    color:#aaa;
+    padding-bottom: 10px;
+}
 
+.info{
+/*     text-align:left; */
+}
 .thumb{
     margin:15px;
     border-radius: 2px;

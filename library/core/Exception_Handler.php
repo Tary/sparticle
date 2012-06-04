@@ -103,17 +103,17 @@ class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
                     '<div id="php_error"><strong><span style="color:#faa51a;">PHP Interpreter ERROR ['.
                     $e->getCode().']:</span>  '.
                     $e->getMessage().' at Line( '.
-                    $e->getLine().' )in File: '.
-                    $e->getFile().'</strong><br /><br /><p><pre>'.
-                    $e->getTraceAsString().'</pre></p></div>';
+                    $e->getLine().' ) in File: '.
+                    str_replace(LAIKA_ROOT, "",$e->getFile()).'</strong><br /><br /><p><pre>'.
+                    str_replace(LAIKA_ROOT, "",$e->getTraceAsString()).'</pre></p></div>';
             else
                 $trace =
                     '<div id="php_error"><strong><span style="color:#faa51a;">LAIKA ERROR ['.
                     $e->getCode().']:</span> '.
                     $e->getMessage().' at Line( '.
                     $e->getLine().' ) in File: '.
-                    $e->getFile().'</strong><br /><br /><p><pre>'.
-                    $e->getTraceAsString().'</pre></p></div>';
+                    str_replace(LAIKA_ROOT, "",$e->getFile()).'</strong><br /><br /><p><pre>'.
+                    str_replace(LAIKA_ROOT, "",$e->getTraceAsString()).'</pre></p></div>';
             $this->display($trace,$e->getFile(),$e->getLine());
         else:
             $message = '<div id="php_error">
@@ -135,7 +135,12 @@ class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
     public function display($trace,$file,$line){
         $exception_css = HTTP_ROOT.'/stylesheets/exception.css';
         $reset_css     = HTTP_ROOT.'/stylesheets/reset.css';
+        
         isset($file) ? $source = highlight_file($file, true) : $source = "";
+        $lines = implode(range(1, count(file($file))), '<br />');
+        
+        $file = str_replace(LAIKA_ROOT, "", $file);
+               
         $page = "<!DOCTYPE html>
                 <html lang=en>
                 <head>
@@ -149,16 +154,18 @@ class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
                 <div id=main>
                 $trace
                 <div id=source>
-                <h2>Source Code:</h2>
-                $source
+                <h2>Full Source:</h2>
+                <h3>$file</h3>
+                <br />
+                <table><tr><td class=num>\n$lines\n</td><td>\n$source\n</td></tr></table>
                 </div>
                 </div>
                 </body>
                 </html>";
 
-       //$_SESSION['ERROR_MSG'] = $page;
-       //self::redirect_to('/error/exceptions');
+       $_SESSION['ERROR_MSG'] = $page;
+       self::redirect_to('/error/exceptions');
          
-        echo $page;
+       //echo $page;
     }
 }

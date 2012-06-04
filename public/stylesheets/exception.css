@@ -41,5 +41,24 @@ pre{
     color: #555;    
     background-color:#fff;
     border-radius:10px;
-    display:none;
+/*     display:none; */
+}
+
+.num {
+    float: left;
+    color:  #ccc;
+    text-align: right;
+    margin-right: 6pt;
+    padding-right: 6pt;
+    border-right: 2px solid #eee;
+}
+
+td{
+    margin-left:-15px;
+    vertical-align: top;
+    font-size: 13px;
+    font-family: "Espresso Mono", "Monaco", monospace;
+}
+code{
+    white-space: nowrap;
 }

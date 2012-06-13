@@ -135,12 +135,13 @@ class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
     public function display($trace,$file,$line){
         $exception_css = HTTP_ROOT.'/stylesheets/exception.css';
         $reset_css     = HTTP_ROOT.'/stylesheets/reset.css';
+        $common_css    = HTTP_ROOT.'/stylesheets/common.css';
         
         isset($file) ? $source = highlight_file($file, true) : $source = "";
         $lines = implode(range(1, count(file($file))), '<br />');
         
         $file = str_replace(LAIKA_ROOT, "", $file);
-               
+        $link = Laika_Router::init()->uri;       
         $page = "<!DOCTYPE html>
                 <html lang=en>
                 <head>
@@ -149,9 +150,11 @@ class Laika_Exception_Handler extends Laika_Singleton implements SplSubject{
                 <link rel=\"shortcut icon\" href=/favicon.ico type=image/x-icon />
                 <link rel=stylesheet href=$reset_css type=text/css>
                 <link rel=stylesheet href=$exception_css type=text/css>
+                <link rel=stylesheet href=$common_css type=text/css>
                 </head>
                 <body>
                 <div id=main>
+				<a href=$link class=refresh> <span class=webfont >&#74;</span> Refresh</a>
                 $trace
                 <div id=source>
                 <h2>Full Source:</h2>

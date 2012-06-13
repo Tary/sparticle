@@ -57,7 +57,7 @@ abstract class Laika_Abstract_Page_Controller extends Laika_Abstract_Controller{
         endif;
 
         ob_end_flush();
-        Laika_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);
+        //Laika_Event::dispatch('PAGE_RENDER_COMPLETE',__FILE__);
 
         /*$html = ob_get_contents();
         $html = ob_get_clean();

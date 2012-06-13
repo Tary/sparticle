@@ -46,7 +46,7 @@ class Laika_File extends Laika{
     }
     
     public function move($old,$new){
-        if(copy($old, $new))
+        if(isset($old)&&copy($old, $new))
             unlink($old);
         else throw new Laika_Exception('FILE_MOVE_ERROR',853);
         return true;
@@ -73,7 +73,7 @@ class Laika_File extends Laika{
         $post  = $file['upload'];
         $count = count($post['name']);
         $total_size = 0;
-
+        
         for($i=0;$i<$count;$i++){
             foreach($post as $key => $array)
                 $f[$i][$key] = $array[$i];
@@ -85,11 +85,12 @@ class Laika_File extends Laika{
             $user  = str_replace(MEDIA_DIRECTORY.'/',"",$move);
             $uuid  = uniqid(hash('crc32',$user).'_').".$ext";
             $path  = $move.'/'.$uuid;         
-        
+            
+
             if($this->move(Laika_Uploader::init()->upload($upload),$path))
                 $success = true;
             else
-                $success = false;           
+                $success = false;
 
             $ids[] = $uuid;             
         }

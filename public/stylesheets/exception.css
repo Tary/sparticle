@@ -62,3 +62,10 @@ td{
 code{
     white-space: nowrap;
 }
+
+.refresh{
+    font-size: large;
+    top:10px;
+    left:10px;
+    position: relative;
+}
